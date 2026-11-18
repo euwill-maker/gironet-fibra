@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Planos Gamer Gironet + ExitLag | 800 Mega e 1 Giga</title>
-<meta name="description" content="Planos Gamer da Gironet: 800 Mega ou 1 Giga de download e upload, licença ExitLag inclusa, rotas com priorização para jogos e instalação com até dois pontos cabeados.">
+<meta name="description" content="Planos Gamer da Gironet: 800 Mega ou 1 Giga de download e upload, ExitLag incluso, rotas priorizadas para jogos e instalação com até dois pontos cabeados.">
 <meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#1e2433">
+<meta name="theme-color" content="#1c2137">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Planos Gamer Gironet + ExitLag">
 <meta property="og:description" content="800 Mega ou 1 Giga simétricos, ExitLag incluso e instalação cabeada para PC e console.">
@@ -19,15 +19,18 @@
 <script>document.documentElement.classList.add('js')</script>
 <style>
 :root{
-  --bg:#1e2433; --bg2:#191e2c; --card:#252c3f; --card2:#2c344a;
-  --line:rgba(160,182,224,.14); --line2:rgba(160,182,224,.24);
-  --text:#eef2f8; --muted:#a8b2c6; --dim:#7f8aa1;
-  --green:#85c647; --green2:#a4e163; --green-ink:#14200c;
-  --cyan:#45d3f3; --blue:#2c9fdc; --amber:#f2b84b;
+  --bg:#1c2137; --bg2:#171b2f; --card:#232a46; --card2:#2b3356;
+  --line:rgba(150,172,255,.14); --line2:rgba(150,172,255,.26);
+  --text:#f2f5ff; --muted:#b0bad8; --dim:#8a95b8;
+  --green:#96ff40; --green2:#bdff85; --green-ink:#0d1803;
+  --cyan:#22e4ff; --violet:#a463ff; --pink:#ff4fc4;
+  --g:150,255,64; --c:34,228,255; --v:164,99,255; --p:255,79,196;
   --ch:14px;
-  --chamfer:polygon(var(--ch) 0,100% 0,100% calc(100% - var(--ch)),calc(100% - var(--ch)) 100%,0 100%,0 var(--ch));
   --head:'Rajdhani',system-ui,sans-serif;
 }
+*,*::before,*::after{--chamfer:polygon(var(--ch) 0,100% 0,100% calc(100% - var(--ch)),calc(100% - var(--ch)) 100%,0 100%,0 var(--ch))}
+@property --a{syntax:'<angle>';inherits:false;initial-value:0deg}
+@keyframes spin{to{--a:360deg}}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:76px}
 body{background:var(--bg);color:var(--text);font:400 16px/1.6 Inter,system-ui,-apple-system,sans-serif;overflow-x:clip;-webkit-font-smoothing:antialiased}
@@ -36,275 +39,303 @@ a{color:inherit;text-decoration:none}
 :focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
 .wrap{width:min(1140px,100% - 32px);margin-inline:auto}
 .ic{width:22px;height:22px;flex:none}
-.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
 /* ---------- tipografia ---------- */
-.eyebrow{display:inline-flex;align-items:center;gap:10px;font:700 14px/1 var(--head);letter-spacing:.16em;text-transform:uppercase;color:var(--cyan)}
-.eyebrow::before{content:"";width:22px;height:2px;background:currentColor;box-shadow:0 0 10px currentColor}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font:700 14px/1 var(--head);letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);text-shadow:0 0 12px rgba(var(--c),.65)}
+.eyebrow::before{content:"";width:22px;height:2px;background:currentColor;box-shadow:0 0 8px currentColor,0 0 16px currentColor}
 h1,h2,h3{font-family:var(--head);font-weight:700;letter-spacing:.005em}
-h2{font-size:clamp(30px,5.2vw,46px);line-height:1.04;margin:14px 0 16px;text-wrap:balance}
+h2{font-size:clamp(30px,5.2vw,46px);line-height:1.04;margin:14px 0;text-wrap:balance}
 h3{font-size:22px;line-height:1.15}
-.lead{color:var(--muted);font-size:17px;max-width:62ch}
-.hl{color:var(--green);text-shadow:0 0 28px rgba(133,198,71,.45)}
-.hl-c{color:var(--cyan)}
-.sec{padding:76px 0}
+.lead{color:var(--muted);font-size:17px;max-width:56ch}
+.hl{color:var(--green);text-shadow:0 0 6px rgba(var(--g),.55),0 0 26px rgba(var(--g),.45)}
+.hl-c{color:var(--cyan);text-shadow:0 0 6px rgba(var(--c),.55),0 0 24px rgba(var(--c),.4)}
+.sec{position:relative;padding:58px 0}
 .sec-alt{background:var(--bg2)}
-.sec-head{max-width:760px;margin-bottom:40px}
+.sec-alt::before{content:"";position:absolute;top:0;left:50%;width:min(760px,86%);height:1px;transform:translateX(-50%);background:linear-gradient(90deg,transparent,var(--cyan) 30%,var(--violet) 70%,transparent);box-shadow:0 0 10px rgba(var(--c),.8),0 0 26px rgba(var(--v),.55)}
+.sec-head{max-width:760px;margin-bottom:28px}
 .center{text-align:center;margin-inline:auto}
 .center .lead{margin-inline:auto}
-.note{display:flex;gap:12px;align-items:flex-start;padding:16px 18px;border:1px solid var(--line);border-left:3px solid var(--cyan);background:rgba(69,211,243,.06);border-radius:4px 10px 10px 4px;color:var(--muted);font-size:14.5px;line-height:1.55}
-.note .ic{color:var(--cyan);margin-top:1px;width:20px;height:20px}
+.note{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;border:1px solid rgba(var(--c),.25);border-left:3px solid var(--cyan);background:rgba(var(--c),.06);border-radius:4px 10px 10px 4px;color:var(--muted);font-size:14px;line-height:1.5}
+.note .ic{color:var(--cyan);margin-top:1px;width:19px;height:19px}
 .fine{color:var(--dim);font-size:13.5px;line-height:1.55}
 
-/* ---------- botões ---------- */
-.btn{--ch:10px;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:12px 24px;font:700 17px/1 var(--head);letter-spacing:.06em;text-transform:uppercase;clip-path:var(--chamfer);transition:transform .15s,background .2s,filter .2s;cursor:pointer;border:0;text-align:center}
+/* ---------- botões (neon) ---------- */
+.btn{--ch:10px;position:relative;isolation:isolate;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:12px 24px;font:700 17px/1 var(--head);letter-spacing:.06em;text-transform:uppercase;transition:transform .15s,filter .2s;cursor:pointer;border:0;background:none;text-align:center}
+.btn::before,.btn::after{content:"";position:absolute;z-index:-1;clip-path:var(--chamfer);transition:background .2s}
+.btn::before{inset:0;background:var(--bb)}
 .btn:hover{transform:translateY(-2px)}
 .btn:active{transform:translateY(0)}
 .btn .ic{width:20px;height:20px}
-.btn-primary{background:var(--green);color:var(--green-ink)}
-.btn-primary:hover{background:var(--green2)}
-.btn-ghost{background:rgba(69,211,243,.12);color:var(--cyan)}
-.btn-ghost:hover{background:rgba(69,211,243,.2)}
+.btn-primary{--bb:var(--green);color:var(--green-ink);filter:drop-shadow(0 0 10px rgba(var(--g),.5))}
+.btn-primary:hover{--bb:var(--green2);filter:drop-shadow(0 0 18px rgba(var(--g),.75))}
+.btn-ghost{--bb:var(--cyan);color:var(--cyan);text-shadow:0 0 10px rgba(var(--c),.6);filter:drop-shadow(0 0 7px rgba(var(--c),.35))}
+.btn-ghost::after{--ch:9.1px;inset:1.5px;background:#1a2242}
+.btn-ghost:hover::after{background:#1f2b52}
+.btn-ghost:hover{filter:drop-shadow(0 0 14px rgba(var(--c),.6))}
 .btn-block{width:100%}
 .btns{display:flex;flex-wrap:wrap;gap:12px}
 
 /* ---------- header ---------- */
-.top{position:sticky;top:0;z-index:50;background:rgba(30,36,51,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .2s}
-.top.scrolled{border-bottom-color:var(--line)}
+.top{position:sticky;top:0;z-index:50;background:rgba(26,31,52,.84);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.top::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,rgba(var(--c),.8),rgba(var(--v),.8),rgba(var(--g),.8),transparent);box-shadow:0 0 10px rgba(var(--c),.6);opacity:0;transition:opacity .25s}
+.top.scrolled::after{opacity:1}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
 .top .logo img{height:32px;width:auto}
 .nav{display:none;gap:28px;font:600 16px/1 var(--head);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-.nav a:hover{color:var(--text)}
+.nav a:hover{color:var(--cyan);text-shadow:0 0 10px rgba(var(--c),.7)}
 .top .btn{min-height:42px;padding:10px 16px;font-size:15px}
 
 /* ---------- hero ---------- */
-.hero{position:relative;isolation:isolate;padding:44px 0 64px;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;z-index:-2;
-  background:linear-gradient(rgba(69,211,243,.08) 1px,transparent 1px) 0 0/44px 44px,linear-gradient(90deg,rgba(69,211,243,.08) 1px,transparent 1px) 0 0/44px 44px;
-  -webkit-mask-image:radial-gradient(ellipse 90% 70% at 70% 20%,#000 10%,transparent 70%);mask-image:radial-gradient(ellipse 90% 70% at 70% 20%,#000 10%,transparent 70%)}
-.hero::after{content:"";position:absolute;inset:-20% -10% auto auto;width:720px;height:720px;z-index:-1;border-radius:50%;
-  background:radial-gradient(circle at 40% 40%,rgba(133,198,71,.22),transparent 55%),radial-gradient(circle at 70% 60%,rgba(69,211,243,.18),transparent 55%);filter:blur(10px)}
-.hero-grid{display:grid;gap:40px;align-items:center}
-.tag{display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border:1px solid var(--line2);border-radius:999px;background:rgba(37,44,63,.7);font:700 13px/1 var(--head);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
-.tag i{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 0 rgba(133,198,71,.6);animation:pulse 2s infinite}
-@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(133,198,71,0)}100%{box-shadow:0 0 0 0 rgba(133,198,71,0)}}
-.hero h1{font-size:clamp(40px,8.4vw,72px);line-height:.95;text-transform:uppercase;margin:20px 0 18px;text-wrap:balance}
+.hero{position:relative;isolation:isolate;padding:36px 0 76px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;z-index:-3;
+  background:linear-gradient(rgba(var(--c),.09) 1px,transparent 1px) 0 0/44px 44px,linear-gradient(90deg,rgba(var(--c),.09) 1px,transparent 1px) 0 0/44px 44px;
+  -webkit-mask-image:radial-gradient(ellipse 90% 60% at 70% 15%,#000 10%,transparent 70%);mask-image:radial-gradient(ellipse 90% 60% at 70% 15%,#000 10%,transparent 70%)}
+.hero::after{content:"";position:absolute;z-index:-2;top:-260px;right:-300px;width:820px;height:820px;
+  background:radial-gradient(circle 250px at 35% 40%,rgba(var(--g),.24),transparent),radial-gradient(circle 250px at 66% 52%,rgba(var(--v),.34),transparent),radial-gradient(circle 220px at 45% 70%,rgba(var(--c),.22),transparent)}
+.floor{position:absolute;z-index:-1;left:-60%;right:-60%;bottom:0;height:420px;overflow:hidden;transform:perspective(360px) rotateX(60deg);transform-origin:50% 100%;
+  -webkit-mask-image:linear-gradient(to top,#000 0%,rgba(0,0,0,.6) 40%,transparent 92%);mask-image:linear-gradient(to top,#000 0%,rgba(0,0,0,.6) 40%,transparent 92%)}
+.floor i{position:absolute;inset:-60px 0 0;background:linear-gradient(rgba(var(--v),.7) 2px,transparent 2px) 0 0/100% 60px,linear-gradient(90deg,rgba(var(--c),.55) 2px,transparent 2px) 50% 0/60px 100%;animation:floor 2.4s linear infinite}
+@keyframes floor{to{transform:translateY(60px)}}
+.hero-grid{display:grid;gap:36px;align-items:center}
+.tag{display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border:1px solid rgba(var(--g),.45);border-radius:999px;background:rgba(35,42,70,.75);box-shadow:0 0 18px rgba(var(--g),.15);font:700 13px/1 var(--head);letter-spacing:.14em;text-transform:uppercase;color:var(--text)}
+.tag i{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 0 rgba(var(--g),.6);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(var(--g),0)}100%{box-shadow:0 0 0 0 rgba(var(--g),0)}}
+.hero h1{font-size:clamp(40px,8.6vw,74px);line-height:.95;text-transform:uppercase;margin:18px 0 16px;text-wrap:balance}
+.hero h1 .hl{animation:flicker 2.4s linear .5s 1 both}
+@keyframes flicker{0%,18%,22%,26%,52%,56%,100%{opacity:1}20%,24%,54%{opacity:.35}}
 .hero .lead{font-size:17.5px}
-.hl-list{list-style:none;display:grid;gap:10px;margin:26px 0 30px}
-.hl-list li{display:flex;align-items:center;gap:12px;font-weight:500;font-size:15.5px}
-.hl-list .ic{width:28px;height:28px;padding:5px;border-radius:7px;background:rgba(133,198,71,.14);color:var(--green)}
+.chips{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 28px}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:8px 13px 8px 10px;border-radius:999px;border:1px solid var(--line2);background:rgba(35,42,70,.78);font-size:14.5px;font-weight:500;line-height:1.2}
+.chip .ic{width:18px;height:18px;color:var(--green);filter:drop-shadow(0 0 4px rgba(var(--g),.85))}
 
 /* painel "selecione seu plano" */
-.select{--ch:18px;position:relative;padding:1.5px;background:linear-gradient(150deg,rgba(69,211,243,.7),rgba(160,182,224,.14) 35%,rgba(160,182,224,.14) 65%,rgba(133,198,71,.8));clip-path:var(--chamfer)}
-.select-in{--ch:17px;clip-path:var(--chamfer);background:linear-gradient(180deg,#272e43,#212839);padding:18px}
+.select{filter:drop-shadow(0 0 24px rgba(var(--c),.22))}
+.select-b{--ch:18px;padding:1.5px;clip-path:var(--chamfer);background:linear-gradient(150deg,var(--cyan),rgba(var(--v),.55) 40%,rgba(var(--v),.3) 62%,var(--green))}
+.select-in{--ch:17.1px;clip-path:var(--chamfer);background:linear-gradient(180deg,#262e4f,#1e2541);padding:18px}
 .select-head{display:flex;justify-content:space-between;align-items:center;font:700 14px/1 var(--head);letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
 .select-head span:last-child{display:flex;gap:5px}
 .select-head span:last-child i{width:7px;height:7px;background:var(--line2);transform:skewX(-20deg)}
-.select-head span:last-child i:first-child{background:var(--green)}
+.select-head span:last-child i:first-child{background:var(--green);box-shadow:0 0 8px var(--green)}
 .picks{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.pick{--ch:12px;position:relative;display:flex;flex-direction:column;gap:2px;padding:16px 14px 14px;background:var(--card2);clip-path:var(--chamfer);transition:background .2s,transform .2s}
-.pick:hover{background:#333c55;transform:translateY(-2px)}
-.pick-hot{background:linear-gradient(160deg,rgba(133,198,71,.24),rgba(133,198,71,.06) 60%),var(--card2)}
-.pick-hot:hover{background:linear-gradient(160deg,rgba(133,198,71,.32),rgba(133,198,71,.1) 60%),#333c55}
+.pick{--ch:12px;position:relative;display:flex;flex-direction:column;gap:2px;padding:16px 14px 14px;clip-path:var(--chamfer);background:linear-gradient(160deg,rgba(var(--c),.2),rgba(var(--c),.04) 60%),var(--card2);transition:transform .2s,filter .2s}
+.pick:hover{transform:translateY(-2px);filter:brightness(1.12)}
+.pick-hot{background:linear-gradient(160deg,rgba(var(--g),.26),rgba(var(--g),.05) 60%),var(--card2)}
 .pick-tag{font:700 12.5px/1.1 var(--head);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.pick-speed{font:700 46px/1 var(--head);margin-top:8px;display:flex;align-items:baseline;gap:6px}
+.pick-speed{font:700 46px/1 var(--head);margin-top:8px;display:flex;align-items:baseline;gap:6px;color:var(--cyan);text-shadow:0 0 8px rgba(var(--c),.55),0 0 24px rgba(var(--c),.35)}
 .pick-speed small{font-size:18px;letter-spacing:.06em}
-.pick-hot .pick-speed{color:var(--green)}
+.pick-hot .pick-speed{color:var(--green);text-shadow:0 0 8px rgba(var(--g),.55),0 0 24px rgba(var(--g),.4)}
 .pick-sub{font-size:12.5px;color:var(--dim)}
 .pick-price{margin-top:12px;font:700 22px/1 var(--head)}
 .pick-price small{font-size:13px;color:var(--muted);font-weight:600;margin-left:2px}
-.pick-badge{position:absolute;top:10px;right:10px;font:700 10.5px/1 var(--head);letter-spacing:.1em;text-transform:uppercase;background:var(--green);color:var(--green-ink);padding:4px 7px;border-radius:3px}
+.pick-badge{position:absolute;top:10px;right:10px;font:700 10.5px/1 var(--head);letter-spacing:.1em;text-transform:uppercase;background:var(--green);color:var(--green-ink);padding:4px 7px;border-radius:3px;box-shadow:0 0 12px rgba(var(--g),.7)}
 .select-foot{display:flex;align-items:center;gap:10px;margin-top:14px;padding-top:14px;border-top:1px dashed var(--line2);font-size:14px;color:var(--muted)}
-.select-foot .ic{color:var(--cyan);width:20px;height:20px}
+.select-foot .ic{color:var(--cyan);width:20px;height:20px;filter:drop-shadow(0 0 5px rgba(var(--c),.8))}
 .select-foot b{color:var(--text)}
 
-/* ---------- desafios ---------- */
-.grid{display:grid;gap:16px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px}
-.card h3{margin:16px 0 8px}
+/* ---------- cards ---------- */
+.grid{display:grid;gap:14px}
+.card{background:linear-gradient(180deg,rgba(255,255,255,.03),transparent 60%),var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;transition:border-color .2s,box-shadow .2s}
+.card:hover{border-color:rgba(var(--c),.5);box-shadow:0 0 26px rgba(var(--c),.16)}
+.card h3{margin:14px 0 6px}
 .card p{color:var(--muted);font-size:15px}
-.ibox{flex:none;width:48px;height:48px;display:grid;place-items:center;border-radius:12px;background:rgba(69,211,243,.12);color:var(--cyan)}
-.ibox .ic{width:24px;height:24px}
-.ibox-amber{background:rgba(242,184,75,.13);color:var(--amber)}
-.ibox-green{background:rgba(133,198,71,.14);color:var(--green)}
-.combo-strip{margin-top:28px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;padding:20px 22px;border-radius:14px;background:linear-gradient(90deg,rgba(133,198,71,.14),rgba(69,211,243,.08));border:1px solid rgba(133,198,71,.3)}
-.combo-strip p{flex:1 1 280px;font-weight:500}
+.ibox{--k:var(--c);flex:none;width:46px;height:46px;display:grid;place-items:center;border-radius:12px;background:rgba(var(--k),.1);color:rgb(var(--k));box-shadow:inset 0 0 0 1px rgba(var(--k),.45),0 0 18px rgba(var(--k),.22)}
+.ibox .ic{width:23px;height:23px;filter:drop-shadow(0 0 5px rgba(var(--k),.85))}
+.ibox-g{--k:var(--g)}
+.ibox-v{--k:var(--v)}
+.ibox-p{--k:var(--p)}
+.mini{grid-template-columns:1fr 1fr;gap:12px}
+.mini .card{padding:18px 15px}
+.mini .card h3{font-size:19px;margin:14px 0 4px}
+.mini .card p{font-size:14px;line-height:1.45}
+.mini .ibox{width:42px;height:42px}
+.mini .ibox .ic{width:21px;height:21px}
+.combo-strip{margin-top:22px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;padding:18px 20px;border-radius:14px;background:linear-gradient(90deg,rgba(var(--g),.13),rgba(var(--v),.12));border:1px solid rgba(var(--g),.4);box-shadow:0 0 28px rgba(var(--g),.1)}
+.combo-strip p{flex:1 1 260px;font-weight:600;font-size:16.5px;line-height:1.45}
 
 /* ---------- planos ---------- */
-.diff{display:flex;align-items:center;gap:12px;width:fit-content;max-width:100%;margin:0 auto 34px;padding:10px 18px;border-radius:999px;border:1px dashed rgba(133,198,71,.55);background:rgba(133,198,71,.08);font-size:15px;color:var(--text);text-align:left}
-.diff b{color:var(--green);font-family:var(--head);font-size:19px;white-space:nowrap}
-.plans{display:grid;gap:22px;align-items:stretch;max-width:980px;margin-inline:auto}
-.plan-wrap{position:relative}
-.plan-wrap.hot::before{content:"";position:absolute;inset:16px;background:rgba(133,198,71,.35);filter:blur(36px);z-index:-1}
-.plan{--ch:20px;height:100%;padding:1.5px;clip-path:var(--chamfer);background:linear-gradient(160deg,rgba(69,211,243,.55),rgba(160,182,224,.16) 40%,rgba(160,182,224,.16))}
-.hot .plan{background:linear-gradient(160deg,var(--green),rgba(133,198,71,.25) 45%,rgba(69,211,243,.55))}
-.plan-in{--ch:19px;height:100%;clip-path:var(--chamfer);background:linear-gradient(180deg,#283048,#222a3c 40%);padding:28px 24px 26px;display:flex;flex-direction:column}
+.diff{display:flex;align-items:center;gap:12px;width:fit-content;max-width:100%;margin:0 auto 30px;padding:10px 18px;border-radius:999px;border:1px dashed rgba(var(--g),.7);background:rgba(var(--g),.08);box-shadow:0 0 22px rgba(var(--g),.15);font-size:15px;color:var(--text);text-align:left}
+.diff b{color:var(--green);font-family:var(--head);font-size:20px;white-space:nowrap;text-shadow:0 0 12px rgba(var(--g),.6)}
+.plans{display:grid;gap:26px;align-items:stretch;max-width:980px;margin-inline:auto}
+.plan-wrap{position:relative;isolation:isolate}
+.plan-wrap::before{content:"";position:absolute;inset:30px 16px;z-index:-1;background:rgba(var(--c),.5);filter:blur(38px);opacity:.45}
+.plan-wrap.hot::before{background:linear-gradient(160deg,rgba(var(--g),.8),rgba(var(--v),.7));opacity:.6}
+.plan{--ch:20px;height:100%;padding:2px;clip-path:var(--chamfer);background:linear-gradient(160deg,var(--cyan),rgba(var(--c),.25) 35%,rgba(var(--v),.3) 70%,var(--violet))}
+.hot .plan{background:conic-gradient(from var(--a),var(--green),var(--cyan),var(--violet),var(--green));animation:spin 5s linear infinite}
+.plan-in{--ch:18.8px;height:100%;clip-path:var(--chamfer);background:linear-gradient(180deg,#29315a,#212843 45%);padding:26px 22px 24px;display:flex;flex-direction:column}
 .plan-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
 .plan-name{font:700 15px/1.15 var(--head);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 .plan-name b{display:block;font-size:26px;letter-spacing:.04em;color:var(--text)}
-.plan-badge{font:700 12px/1 var(--head);letter-spacing:.1em;text-transform:uppercase;padding:6px 9px;border-radius:4px;background:var(--green);color:var(--green-ink);white-space:nowrap}
-.plan-speed{font:700 84px/.9 var(--head);margin:22px 0 6px;display:flex;align-items:baseline;gap:10px}
+.plan-badge{font:700 12px/1 var(--head);letter-spacing:.1em;text-transform:uppercase;padding:6px 9px;border-radius:4px;background:var(--green);color:var(--green-ink);white-space:nowrap;box-shadow:0 0 14px rgba(var(--g),.7)}
+.plan-speed{font:700 86px/.9 var(--head);margin:20px 0 8px;display:flex;align-items:baseline;gap:10px;color:var(--cyan);text-shadow:0 0 10px rgba(var(--c),.55),0 0 36px rgba(var(--c),.4)}
 .plan-speed small{font-size:30px;letter-spacing:.05em}
-.hot .plan-speed{color:var(--green);text-shadow:0 0 34px rgba(133,198,71,.4)}
-.sym{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:14px;color:var(--muted)}
-.sym span{display:inline-flex;align-items:center;gap:6px}
-.sym .ic{width:16px;height:16px;color:var(--cyan)}
-.price{display:flex;align-items:flex-start;gap:4px;margin:22px 0 4px;font-family:var(--head);font-weight:700;line-height:1}
+.hot .plan-speed{color:var(--green);text-shadow:0 0 10px rgba(var(--g),.55),0 0 38px rgba(var(--g),.45)}
+.sym{display:flex;align-items:center;gap:8px;font-size:14.5px;color:var(--muted)}
+.sym .ic{width:18px;height:18px;color:var(--cyan)}
+.hot .sym .ic{color:var(--green)}
+.price{display:flex;align-items:flex-start;gap:4px;margin:20px 0 4px;font-family:var(--head);font-weight:700;line-height:1}
 .price .cur{font-size:20px;margin-top:8px}
 .price b{font-size:58px;letter-spacing:-.01em}
 .price .cts{display:flex;flex-direction:column;font-size:22px;margin-top:8px}
 .price .cts em{font-style:normal;font-size:14px;color:var(--muted);letter-spacing:.06em;margin-top:6px}
-.plan-desc{color:var(--muted);font-size:15px;margin:10px 0 20px}
-.checks{list-style:none;display:grid;gap:11px;padding:20px 0;border-top:1px solid var(--line);margin-bottom:auto}
-.checks li{display:flex;gap:11px;font-size:14.5px;line-height:1.45}
-.checks .ic{width:18px;height:18px;color:var(--green);margin-top:1px}
+.plan-desc{color:var(--muted);font-size:15px;margin:8px 0 18px}
+.checks{list-style:none;display:grid;gap:10px;padding:18px 0;border-top:1px solid var(--line);margin-bottom:auto}
+.checks li{display:flex;gap:10px;font-size:15px;line-height:1.4}
+.checks .ic{width:18px;height:18px;color:var(--cyan);margin-top:1px;filter:drop-shadow(0 0 4px rgba(var(--c),.8))}
+.hot .checks .ic{color:var(--green);filter:drop-shadow(0 0 4px rgba(var(--g),.8))}
 .checks b{font-weight:600}
-.plan-fid{font-size:13px;color:var(--dim);margin:6px 0 18px;padding-top:14px;border-top:1px dashed var(--line)}
+.plan-fid{font-size:13px;color:var(--dim);margin:4px 0 16px;padding-top:12px;border-top:1px dashed var(--line)}
 
 /* ---------- comparativo ---------- */
-.tbl-wrap{max-width:860px;margin-inline:auto;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--card)}
+.tbl-wrap{max-width:860px;margin-inline:auto;border:1px solid rgba(var(--c),.28);border-radius:16px;overflow:hidden;background:var(--card);box-shadow:0 0 34px rgba(var(--c),.1)}
 table{width:100%;border-collapse:collapse;font-size:14.5px}
-th,td{padding:14px 12px;text-align:center;border-bottom:1px solid var(--line)}
+th,td{padding:13px 12px;text-align:center;border-bottom:1px solid var(--line)}
 th:first-child,td:first-child{text-align:left;padding-left:18px;width:42%}
-thead th{font:700 15px/1.15 var(--head);letter-spacing:.08em;text-transform:uppercase;background:#2b3349;vertical-align:bottom}
+thead th{font:700 15px/1.15 var(--head);letter-spacing:.08em;text-transform:uppercase;background:linear-gradient(180deg,#2e3760,#283056);vertical-align:bottom}
 thead th small{display:block;font-size:12px;color:var(--muted);letter-spacing:.1em;margin-bottom:4px}
-thead th.hot-col{color:var(--green)}
-td.hot-col{background:rgba(133,198,71,.06)}
+thead th.u{color:var(--cyan);text-shadow:0 0 10px rgba(var(--c),.6)}
+thead th.hot-col{color:var(--green);text-shadow:0 0 10px rgba(var(--g),.6)}
+td.hot-col{background:rgba(var(--g),.06)}
 tbody tr:last-child td{border-bottom:0}
 tbody tr.dif td{font-weight:700;font-family:var(--head);font-size:18px}
 tbody tr.dif td:first-child{font-family:Inter,sans-serif;font-size:14.5px;font-weight:600}
+tbody tr.dif td.u{color:var(--cyan)}
 tbody tr.dif td.hot-col{color:var(--green)}
-td .ic{width:20px;height:20px;margin:0 auto;color:var(--green)}
-.tbl-after{max-width:860px;margin:24px auto 0;display:grid;gap:20px;justify-items:center;text-align:center}
+td .ic{width:20px;height:20px;margin:0 auto;color:var(--green);filter:drop-shadow(0 0 4px rgba(var(--g),.8))}
+td.u .ic{color:var(--cyan);filter:drop-shadow(0 0 4px rgba(var(--c),.8))}
+.tbl-after{max-width:860px;margin:22px auto 0;display:grid;gap:18px;justify-items:center;text-align:center}
 .tbl-after p{color:var(--muted)}
 
 /* ---------- exitlag ---------- */
-.ex-grid{display:grid;gap:36px;align-items:start}
-.ex-body p{color:var(--muted);margin-bottom:14px}
+.ex-grid{display:grid;gap:34px;align-items:start}
+.ex-body p{color:var(--muted);margin-bottom:12px}
 .ex-body p b{color:var(--text);font-weight:600}
-.blist{list-style:none;display:grid;gap:14px;margin:24px 0}
-.blist li{display:flex;gap:14px}
-.blist .ibox{width:40px;height:40px;border-radius:10px}
-.blist .ibox .ic{width:20px;height:20px}
-.blist b{display:block;font-weight:600;font-size:15.5px}
-.blist span{color:var(--muted);font-size:14.5px;line-height:1.5}
-.route-card{--ch:18px;padding:1.5px;clip-path:var(--chamfer);background:linear-gradient(160deg,rgba(69,211,243,.6),rgba(160,182,224,.14) 40%,rgba(133,198,71,.6))}
-.route-in{--ch:17px;clip-path:var(--chamfer);background:radial-gradient(ellipse at 50% 100%,rgba(133,198,71,.12),transparent 60%),#20273a;padding:20px 16px 18px}
+.btiles{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px 0}
+.btile{display:flex;flex-direction:column;gap:10px;padding:14px;border-radius:12px;background:var(--card);border:1px solid var(--line);font-weight:600;font-size:14.5px;line-height:1.3}
+.btile .ibox{width:36px;height:36px;border-radius:9px}
+.btile .ibox .ic{width:19px;height:19px}
+.route-card{filter:drop-shadow(0 0 22px rgba(var(--v),.22))}
+.route-b{--ch:18px;padding:1.5px;clip-path:var(--chamfer);background:linear-gradient(160deg,var(--cyan),rgba(var(--v),.4) 45%,var(--green))}
+.route-in{--ch:17.1px;clip-path:var(--chamfer);background:radial-gradient(ellipse at 50% 100%,rgba(var(--g),.13),transparent 60%),radial-gradient(ellipse at 0% 0%,rgba(var(--v),.16),transparent 55%),#1f2643;padding:20px 16px 18px}
 .route-title{font:700 13px/1 var(--head);letter-spacing:.16em;text-transform:uppercase;color:var(--muted);display:flex;justify-content:space-between;padding:0 4px 8px}
-.route-title i{font-style:normal;color:var(--green)}
+.route-title i{font-style:normal;color:var(--green);text-shadow:0 0 10px rgba(var(--g),.8)}
 .route svg{width:100%;height:auto;overflow:visible}
-.route .hop{fill:#2c344a;stroke:rgba(160,182,224,.4);stroke-width:1.5}
-.route .r-grey{fill:none;stroke:rgba(160,182,224,.32);stroke-width:2.5;stroke-dasharray:3 7;stroke-linecap:round}
-.route .r-best{fill:none;stroke:var(--green);stroke-width:4;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 6px rgba(133,198,71,.7))}
-.route .r-flow{fill:none;stroke:#e9ffd2;stroke-width:2;stroke-dasharray:6 22;stroke-linecap:round;animation:flow 1.1s linear infinite}
+.route .hop{fill:#2b3356;stroke:rgba(150,172,255,.45);stroke-width:1.5}
+.route .r-grey{fill:none;stroke:rgba(150,172,255,.38);stroke-width:2.5;stroke-dasharray:3 7;stroke-linecap:round}
+.route .r-best{fill:none;stroke:var(--green);stroke-width:4;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 5px rgba(var(--g),.9)) drop-shadow(0 0 14px rgba(var(--g),.5))}
+.route .r-flow{fill:none;stroke:#f0ffe0;stroke-width:2;stroke-dasharray:6 22;stroke-linecap:round;animation:flow 1.1s linear infinite}
 @keyframes flow{to{stroke-dashoffset:-28}}
-.route .node-ring{fill:#20273a;stroke-width:2.5}
+.route .node-ring{fill:#1f2643;stroke-width:2.5;filter:drop-shadow(0 0 8px rgba(var(--c),.8))}
+.route .srv{filter:drop-shadow(0 0 8px rgba(var(--g),.75))}
 .route text{font-family:'Rajdhani',sans-serif;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
 .route .tn{font-size:23px}
 .route .tl{font-size:20px}
-.route .pk{offset-rotate:0deg;animation:travel 2.6s linear infinite}
+.route .pk{offset-rotate:0deg;animation:travel 2.6s linear infinite;filter:drop-shadow(0 0 6px #fff)}
 @keyframes travel{from{offset-distance:0%}to{offset-distance:100%}}
 .legend{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:6px;padding:0 4px;font-size:13px;color:var(--muted)}
 .legend span{display:inline-flex;align-items:center;gap:8px}
-.legend i{width:22px;height:0;border-top:3px dashed rgba(160,182,224,.5)}
-.legend i.g{border-top:4px solid var(--green)}
-.steps-head{margin:64px 0 26px}
-.steps-head h3{font-size:clamp(26px,4vw,34px)}
-.steps{display:grid;gap:16px;counter-reset:s}
-.step{position:relative;padding:24px 22px 22px;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
-.step::before{counter-increment:s;content:"0" counter(s);font:700 54px/1 var(--head);color:transparent;-webkit-text-stroke:1.5px rgba(69,211,243,.5);position:absolute;right:16px;top:12px}
-.step h4{font:700 21px/1.15 var(--head);margin-bottom:8px;padding-right:64px}
+.legend i{width:22px;height:0;border-top:3px dashed rgba(150,172,255,.5)}
+.legend i.g{border-top:4px solid var(--green);box-shadow:0 0 8px var(--green)}
+.steps-head{margin:52px 0 22px}
+.steps-head h3{font-size:clamp(26px,4vw,34px);margin-top:12px}
+.steps{display:grid;gap:12px;counter-reset:s}
+.step{position:relative;padding:20px 20px 18px;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.step::before{counter-increment:s;content:"0" counter(s);font:700 50px/1 var(--head);color:transparent;-webkit-text-stroke:1.5px var(--cyan);filter:drop-shadow(0 0 6px rgba(var(--c),.7));position:absolute;right:16px;top:12px;opacity:.85}
+.step h4{font:700 22px/1.15 var(--head);margin-bottom:6px;padding-right:64px}
 .step p{color:var(--muted);font-size:15px}
-.step:last-child{border-color:rgba(133,198,71,.4);background:linear-gradient(160deg,rgba(133,198,71,.12),transparent 60%),var(--card)}
-.step:last-child::before{-webkit-text-stroke-color:rgba(133,198,71,.75)}
+.step:last-child{border-color:rgba(var(--g),.45);background:linear-gradient(160deg,rgba(var(--g),.12),transparent 60%),var(--card)}
+.step:last-child::before{-webkit-text-stroke-color:var(--green);filter:drop-shadow(0 0 6px rgba(var(--g),.7))}
 
 /* ---------- por que ---------- */
-.eq{display:grid;gap:12px;align-items:stretch;margin:6px 0 36px}
-.eq-box{padding:20px;border-radius:14px;border:1px solid var(--line2);background:var(--card)}
+.eq{display:grid;gap:12px;align-items:stretch;margin:4px 0 30px}
+.eq-box{padding:18px 20px;border-radius:14px;border:1px solid var(--line2);background:var(--card)}
 .eq-box small{display:block;font:700 13px/1 var(--head);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
 .eq-box b{display:block;font:700 24px/1.1 var(--head)}
 .eq-box span{display:block;font-size:14px;color:var(--muted);margin-top:6px}
-.eq-op{display:grid;place-items:center;font:700 30px/1 var(--head);color:var(--cyan)}
-.eq-res{border-color:rgba(133,198,71,.55);background:linear-gradient(160deg,rgba(133,198,71,.2),rgba(133,198,71,.04)),var(--card)}
-.eq-res b{color:var(--green)}
-.adv{display:grid;gap:12px;margin-bottom:32px}
-.adv li{list-style:none;display:flex;align-items:center;gap:14px;padding:16px 18px;border-radius:12px;background:var(--card);border:1px solid var(--line);font-weight:500;font-size:15.5px}
-.adv .ic{color:var(--green)}
+.eq-op{display:grid;place-items:center;font:700 32px/1 var(--head);color:var(--cyan);text-shadow:0 0 12px rgba(var(--c),.8)}
+.eq-res{border-color:rgba(var(--g),.6);background:linear-gradient(160deg,rgba(var(--g),.2),rgba(var(--g),.04)),var(--card);box-shadow:0 0 30px rgba(var(--g),.18)}
+.eq-res b{color:var(--green);text-shadow:0 0 12px rgba(var(--g),.5)}
 
 /* ---------- instalação ---------- */
-.inst-grid{display:grid;gap:34px;align-items:center}
-.inst-art{border-radius:18px;border:1px solid var(--line);background:linear-gradient(180deg,#232a3d,#1c2232);padding:18px 10px 10px}
+.inst-grid{display:grid;gap:30px;align-items:center}
+.inst-art{border-radius:18px;border:1px solid rgba(var(--c),.25);background:radial-gradient(ellipse at 50% 0%,rgba(var(--v),.16),transparent 60%),linear-gradient(180deg,#232b4a,#1b2038);padding:18px 10px 10px;box-shadow:0 0 30px rgba(var(--c),.08)}
 .inst-art svg{width:100%;height:auto}
 .inst-art text{font-family:'Rajdhani',sans-serif;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
 .cable{fill:none;stroke-width:5;stroke-linecap:round}
-.cable-flow{fill:none;stroke:#fff;stroke-opacity:.75;stroke-width:1.6;stroke-dasharray:4 18;stroke-linecap:round;animation:flow 1.4s linear infinite}
-.cond{list-style:none;display:grid;gap:12px;margin:24px 0}
-.cond li{display:flex;align-items:center;gap:16px;padding:14px 16px;border-radius:12px;background:var(--card);border:1px solid var(--line)}
-.cond .num{min-width:64px;font:700 30px/1 var(--head);color:var(--cyan);text-align:center}
-.cond li:last-child{border-color:rgba(242,184,75,.4);background:linear-gradient(90deg,rgba(242,184,75,.1),transparent 70%),var(--card)}
-.cond li:last-child .num{color:var(--amber);font-size:24px}
+.cable-g{stroke:var(--green);filter:drop-shadow(0 0 6px rgba(var(--g),.85))}
+.cable-c{stroke:var(--cyan);filter:drop-shadow(0 0 6px rgba(var(--c),.85))}
+.cable-flow{fill:none;stroke:#fff;stroke-opacity:.8;stroke-width:1.6;stroke-dasharray:4 18;stroke-linecap:round;animation:flow 1.4s linear infinite}
+.glow-g{filter:drop-shadow(0 0 6px rgba(var(--g),.7))}
+.glow-c{filter:drop-shadow(0 0 6px rgba(var(--c),.7))}
+.cond{list-style:none;display:grid;gap:10px;margin:22px 0}
+.cond li{display:flex;align-items:center;gap:16px;padding:13px 16px;border-radius:12px;background:var(--card);border:1px solid var(--line)}
+.cond .num{min-width:64px;font:700 30px/1 var(--head);color:var(--cyan);text-align:center;text-shadow:0 0 12px rgba(var(--c),.6)}
+.cond li:last-child{border-color:rgba(var(--p),.45);background:linear-gradient(90deg,rgba(var(--p),.1),transparent 70%),var(--card)}
+.cond li:last-child .num{color:var(--pink);font-size:24px;text-shadow:0 0 12px rgba(var(--p),.6)}
 .cond b{display:block;font-weight:600}
 .cond span{font-size:14px;color:var(--muted)}
-.example{font-size:14.5px;color:var(--muted);padding:14px 16px;border-radius:10px;border:1px dashed var(--line2)}
+.example{font-size:14.5px;color:var(--muted);padding:12px 16px;border-radius:10px;border:1px dashed var(--line2)}
 .example b{color:var(--text)}
 
-/* ---------- recursos / extras / para quem ---------- */
-.feat .card h3{font-size:21px}
-.extras{display:grid;gap:18px}
-.extra{position:relative;overflow:hidden;padding:30px 26px;border-radius:18px;border:1px solid var(--line2);background:var(--card)}
-.extra::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(69,211,243,.22),transparent 65%)}
-.extra.g::after{background:radial-gradient(circle,rgba(133,198,71,.22),transparent 65%)}
-.extra h3{font-size:30px;margin:18px 0 10px}
-.extra p{color:var(--muted);font-size:15.5px;position:relative;z-index:1}
-.extra .pill{display:inline-block;margin-top:16px;font:700 12.5px/1 var(--head);letter-spacing:.12em;text-transform:uppercase;padding:7px 10px;border-radius:4px;background:rgba(160,182,224,.12);color:var(--muted)}
-.who .card{display:flex;gap:16px;align-items:flex-start}
-.who .card h3{margin:0 0 6px;font-size:20px}
+/* ---------- extras / para quem ---------- */
+.extras{display:grid;gap:12px}
+.extra{position:relative;overflow:hidden;display:flex;gap:16px;align-items:flex-start;padding:20px;border-radius:16px;border:1px solid var(--line2);background:var(--card)}
+.extra::after{content:"";position:absolute;right:-70px;top:-70px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(var(--c),.22),transparent 65%)}
+.extra.g::after{background:radial-gradient(circle,rgba(var(--g),.22),transparent 65%)}
+.extra h3{font-size:24px;margin:0 0 4px}
+.extra p{color:var(--muted);font-size:15px;position:relative;z-index:1}
+.who{grid-template-columns:1fr 1fr;gap:12px}
+.who .card{padding:18px 15px}
+.who .card h3{font-size:19px;margin:12px 0 4px}
+.who .card p{font-size:14px;line-height:1.45}
+.who .ibox{width:42px;height:42px}
+.who .card:last-child{grid-column:1 / -1}
 
 /* ---------- faq ---------- */
 .faq{max-width:840px;margin-inline:auto;display:grid;gap:10px}
-.faq details{border:1px solid var(--line);border-radius:12px;background:var(--card);transition:border-color .2s}
-.faq details[open]{border-color:rgba(69,211,243,.4)}
-.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 20px;font-weight:600;font-size:16px;line-height:1.4}
+.faq details{border:1px solid var(--line);border-radius:12px;background:var(--card);transition:border-color .2s,box-shadow .2s}
+.faq details[open]{border-color:rgba(var(--c),.5);box-shadow:0 0 22px rgba(var(--c),.12)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:17px 20px;font-weight:600;font-size:16px;line-height:1.4}
 .faq summary::-webkit-details-marker{display:none}
 .faq summary .ic{width:20px;height:20px;color:var(--cyan);transition:transform .2s}
 .faq details[open] summary .ic{transform:rotate(180deg)}
-.faq details p{padding:0 20px 18px;color:var(--muted);font-size:15px}
+.faq details p{padding:0 20px 17px;color:var(--muted);font-size:15px}
 .faq details p a{color:var(--cyan);text-decoration:underline;text-underline-offset:3px}
 
 /* ---------- cta final ---------- */
-.final{position:relative;isolation:isolate;overflow:hidden;border-radius:24px;padding:48px 22px;border:1px solid rgba(133,198,71,.35);background:linear-gradient(160deg,#283149,#1d2334)}
-.final::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(rgba(69,211,243,.07) 1px,transparent 1px) 0 0/36px 36px,linear-gradient(90deg,rgba(69,211,243,.07) 1px,transparent 1px) 0 0/36px 36px;-webkit-mask-image:radial-gradient(ellipse at 50% 0%,#000,transparent 75%);mask-image:radial-gradient(ellipse at 50% 0%,#000,transparent 75%)}
-.final::after{content:"";position:absolute;left:50%;bottom:-260px;width:620px;height:420px;transform:translateX(-50%);z-index:-1;background:radial-gradient(ellipse,rgba(133,198,71,.3),transparent 65%)}
+.final-b{padding:2px;border-radius:24px;background:conic-gradient(from var(--a),var(--green),var(--cyan),var(--violet),var(--green));animation:spin 8s linear infinite;box-shadow:0 0 36px rgba(var(--c),.22),0 0 70px rgba(var(--v),.16)}
+.final{position:relative;isolation:isolate;overflow:hidden;border-radius:22px;padding:42px 16px;background:linear-gradient(160deg,#272f52,#1b2038)}
+.final::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(rgba(var(--c),.08) 1px,transparent 1px) 0 0/36px 36px,linear-gradient(90deg,rgba(var(--c),.08) 1px,transparent 1px) 0 0/36px 36px;-webkit-mask-image:radial-gradient(ellipse at 50% 0%,#000,transparent 75%);mask-image:radial-gradient(ellipse at 50% 0%,#000,transparent 75%)}
+.final::after{content:"";position:absolute;left:50%;bottom:-260px;width:640px;height:420px;transform:translateX(-50%);z-index:-1;background:radial-gradient(ellipse,rgba(var(--g),.3),rgba(var(--v),.15) 45%,transparent 68%)}
 .final h2{margin-top:10px}
-.final-plans{display:grid;gap:14px;max-width:760px;margin:32px auto 0}
-.fp{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;padding:18px 20px;border-radius:14px;background:rgba(30,36,51,.75);border:1px solid var(--line2);text-align:left}
+.final-plans{display:grid;gap:12px;max-width:760px;margin:28px auto 0}
+.fp{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;padding:16px;border-radius:14px;background:rgba(28,33,55,.8);border:1px solid rgba(var(--c),.35);text-align:left}
 .fp-info{flex:1 1 220px}
 .fp-info small{display:block;font:700 13px/1 var(--head);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
-.fp-info b{font:700 30px/1 var(--head);margin-right:12px}
+.fp-info b{font:700 30px/1 var(--head);margin-right:12px;color:var(--cyan);text-shadow:0 0 10px rgba(var(--c),.55)}
 .fp-pr{font:700 22px/1 var(--head);white-space:nowrap}
 .fp-pr em{font-style:normal;font-size:15px;color:var(--muted);margin-left:2px}
-.fp.hot{border-color:rgba(133,198,71,.5)}
-.fp.hot .fp-info b{color:var(--green)}
+.fp.hot{border-color:rgba(var(--g),.55);box-shadow:0 0 22px rgba(var(--g),.12)}
+.fp.hot .fp-info b{color:var(--green);text-shadow:0 0 10px rgba(var(--g),.55)}
 .fp .btn{flex:1 1 220px}
 
 /* ---------- rodapé ---------- */
-footer{background:#171b28;border-top:1px solid var(--line);padding:56px 0 110px;margin-top:76px;font-size:14.5px;color:var(--muted)}
-.foot-grid{display:grid;gap:34px}
+footer{background:#151929;border-top:1px solid var(--line);padding:52px 0 110px;margin-top:72px;font-size:14.5px;color:var(--muted)}
+.foot-grid{display:grid;gap:32px}
 .foot-grid h4{font:700 14px/1 var(--head);letter-spacing:.16em;text-transform:uppercase;color:var(--text);margin-bottom:16px}
 .foot-logo img{height:40px;width:auto;margin-bottom:16px}
 .foot-list{list-style:none;display:grid;gap:10px}
 .foot-list a,.foot-list li{display:flex;align-items:flex-start;gap:10px}
-.foot-list a:hover{color:var(--text)}
+.foot-list a:hover{color:var(--cyan)}
 .foot-list .ic{width:18px;height:18px;color:var(--cyan);margin-top:2px}
 .foot-cond li{display:block;padding-left:14px;position:relative;line-height:1.5}
-.foot-cond li::before{content:"";position:absolute;left:0;top:9px;width:5px;height:5px;background:var(--green);transform:rotate(45deg)}
-.foot-bottom{margin-top:40px;padding-top:22px;border-top:1px solid var(--line);font-size:13px;color:var(--dim);display:grid;gap:8px}
+.foot-cond li::before{content:"";position:absolute;left:0;top:9px;width:5px;height:5px;background:var(--green);transform:rotate(45deg);box-shadow:0 0 6px var(--green)}
+.foot-bottom{margin-top:36px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--dim);display:grid;gap:8px}
 
 /* ---------- whatsapp flutuante ---------- */
-.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:60;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#25d366;color:#fff;box-shadow:0 10px 30px rgba(0,0,0,.35),0 0 0 0 rgba(37,211,102,.5);animation:ring 2.8s infinite;transition:transform .2s}
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:60;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#25d366;color:#fff;box-shadow:0 10px 30px rgba(0,0,0,.35),0 0 18px rgba(37,211,102,.55),0 0 0 0 rgba(37,211,102,.5);animation:ring 2.8s infinite;transition:transform .2s}
 .fab:hover{transform:scale(1.06)}
 .fab .ic{width:30px;height:30px}
-@keyframes ring{60%{box-shadow:0 10px 30px rgba(0,0,0,.35),0 0 0 14px rgba(37,211,102,0)}100%{box-shadow:0 10px 30px rgba(0,0,0,.35),0 0 0 0 rgba(37,211,102,0)}}
+@keyframes ring{60%{box-shadow:0 10px 30px rgba(0,0,0,.35),0 0 18px rgba(37,211,102,.55),0 0 0 14px rgba(37,211,102,0)}100%{box-shadow:0 10px 30px rgba(0,0,0,.35),0 0 18px rgba(37,211,102,.55),0 0 0 0 rgba(37,211,102,0)}}
 
 /* ---------- reveal ---------- */
 html.js .rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
@@ -312,52 +343,48 @@ html.js .rv.in{opacity:1;transform:none}
 
 /* ---------- responsivo ---------- */
 @media (min-width:600px){
-  .g2{grid-template-columns:repeat(2,1fr)}
   .picks{gap:14px}
-  .adv{grid-template-columns:repeat(2,1fr)}
-  .final{padding:60px 40px}
+  .extras{grid-template-columns:1fr 1fr}
+  .final{padding:56px 40px}
+  .fp{padding:18px 20px}
 }
 @media (min-width:760px){
   .plans{grid-template-columns:1fr 1fr}
   .eq{grid-template-columns:1fr auto 1fr auto 1.1fr}
-  .extras{grid-template-columns:1fr 1fr}
   .steps{grid-template-columns:repeat(3,1fr)}
   .foot-grid{grid-template-columns:1.2fr 1fr 1.3fr}
-  .sec{padding:100px 0}
+  .sec{padding:92px 0}
+  .sec-head{margin-bottom:38px}
 }
 @media (min-width:980px){
   .nav{display:flex}
-  .hero{padding:72px 0 96px}
-  .hero-grid{grid-template-columns:1.12fr .88fr;gap:56px}
-  .g4{grid-template-columns:repeat(4,1fr)}
-  .g3{grid-template-columns:repeat(3,1fr)}
+  .hero{padding:68px 0 110px}
+  .hero-grid{grid-template-columns:1.1fr .9fr;gap:56px}
+  .mini{grid-template-columns:repeat(4,1fr);gap:16px}
+  .mini .card{padding:24px 22px}
   .ex-grid{grid-template-columns:1fr 1.05fr;gap:56px}
   .route-card{position:sticky;top:96px}
   .inst-grid{grid-template-columns:1.05fr 1fr;gap:56px}
-  .adv{grid-template-columns:repeat(3,1fr)}
-  .who{grid-template-columns:repeat(6,1fr)}
-  .who .card{grid-column:span 2}
-  .who .card:nth-child(4){grid-column:2 / span 2}
-  .who .card:nth-child(5){grid-column:4 / span 2}
+  .who{grid-template-columns:repeat(5,1fr);gap:14px}
+  .who .card{padding:22px 18px}
+  .who .card:last-child{grid-column:auto}
 }
 @media (max-width:599px){
   table{font-size:13.5px}
-  th,td{padding:13px 8px}
+  th,td{padding:12px 8px}
   th:first-child,td:first-child{padding-left:14px;width:36%}
   thead th{font-size:14px}
   tbody tr.dif td{font-size:16.5px;white-space:nowrap}
   tbody tr.dif td:first-child{font-size:13.5px}
-  .sec{padding:64px 0}
-  .final{padding:44px 16px}
-  .fp{padding:16px}
   .fp .btn{padding-inline:14px;font-size:16px}
 }
 @media (max-width:380px){
   .pick-speed{font-size:40px}
   .pick{padding:14px 11px 12px}
-  .plan-speed{font-size:72px}
-  th,td{padding:12px 8px}
+  .plan-speed{font-size:74px}
+  th,td{padding:11px 7px}
   th:first-child,td:first-child{padding-left:12px}
+  .mini .card,.who .card{padding:16px 13px}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -422,26 +449,26 @@ html.js .rv.in{opacity:1;transform:none}
 
 <!-- 1. APRESENTAÇÃO -->
 <section class="hero" id="inicio">
+  <div class="floor" aria-hidden="true"><i></i></div>
   <div class="wrap hero-grid">
     <div>
-      <span class="tag"><i></i>Planos Gamer · Gironet + ExitLag</span>
+      <span class="tag"><i></i>Linha Gamer · Gironet + ExitLag</span>
       <h1>Sua conexão está pronta para o <span class="hl">próximo nível?</span></h1>
-      <p class="lead">Mais velocidade, rotas otimizadas para jogos e ExitLag incluso. Conheça os planos Gamer da Gironet e tenha mais recursos para jogar, competir e fazer suas transmissões.</p>
-      <ul class="hl-list">
-        <li><svg class="ic"><use href="#i-sym"/></svg>800 Mega ou 1 Giga de download e upload</li>
-        <li><svg class="ic"><use href="#i-zap"/></svg>Licença ExitLag inclusa</li>
-        <li><svg class="ic"><use href="#i-route"/></svg>Rotas com priorização de tráfego para jogos</li>
-        <li><svg class="ic"><use href="#i-eth"/></svg>Instalação com até dois pontos cabeados</li>
-        <li><svg class="ic"><use href="#i-tv"/></svg>Watch TV e Digilivros inclusos</li>
+      <p class="lead">Fibra simétrica, rotas priorizadas para jogos e ExitLag incluso no plano.</p>
+      <ul class="chips">
+        <li class="chip"><svg class="ic"><use href="#i-sym"/></svg>800 Mega ou 1 Giga</li>
+        <li class="chip"><svg class="ic"><use href="#i-zap"/></svg>ExitLag incluso</li>
+        <li class="chip"><svg class="ic"><use href="#i-route"/></svg>Rotas para jogos</li>
+        <li class="chip"><svg class="ic"><use href="#i-eth"/></svg>2 pontos no cabo</li>
       </ul>
       <div class="btns">
-        <a class="btn btn-ghost" href="#planos">Conhecer os planos</a>
+        <a class="btn btn-ghost" href="#planos">Ver os planos</a>
         <a class="btn btn-primary" href="https://wa.me/5513997049248?text=Ol%C3%A1%21%20Vi%20a%20p%C3%A1gina%20dos%20planos%20Gamer%20da%20Gironet%20e%20quero%20contratar." target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg>Quero contratar</a>
       </div>
     </div>
 
     <div class="select" aria-label="Planos Gamer">
-      <div class="select-in">
+      <div class="select-b"><div class="select-in">
         <div class="select-head"><span>Selecione seu plano</span><span aria-hidden="true"><i></i><i></i><i></i></span></div>
         <div class="picks">
           <a class="pick" href="#plano-ultra">
@@ -459,7 +486,7 @@ html.js .rv.in{opacity:1;transform:none}
           </a>
         </div>
         <div class="select-foot"><svg class="ic"><use href="#i-zap"/></svg><span><b>ExitLag incluso</b> nos dois planos</span></div>
-      </div>
+      </div></div>
     </div>
   </div>
 </section>
@@ -469,17 +496,17 @@ html.js .rv.in{opacity:1;transform:none}
   <div class="wrap">
     <div class="sec-head rv">
       <span class="eyebrow">Jogo online</span>
-      <h2>Não é só velocidade. A conexão também importa.</h2>
-      <p class="lead">Em jogos online, a experiência depende de diferentes fatores, como a estabilidade da rede, o tempo de resposta da conexão e a rota utilizada até o servidor do jogo. Oscilações no ping e perda de pacotes podem prejudicar as partidas.</p>
+      <h2>Não é só velocidade. A <span class="hl">conexão</span> também importa.</h2>
+      <p class="lead">Na partida, pesam a estabilidade, o tempo de resposta e a rota até o servidor do jogo.</p>
     </div>
-    <div class="grid g2 g4">
-      <div class="card rv"><div class="ibox ibox-amber"><svg class="ic"><use href="#i-signal"/></svg></div><h3>Ping elevado</h3><p>Quando o tempo de resposta sobe, o que você faz demora mais para chegar ao servidor do jogo.</p></div>
-      <div class="card rv"><div class="ibox ibox-amber"><svg class="ic"><use href="#i-pkx"/></svg></div><h3>Perda de pacotes</h3><p>Dados que não chegam corretamente ao destino podem causar travadas e ações que não registram.</p></div>
-      <div class="card rv"><div class="ibox ibox-amber"><svg class="ic"><use href="#i-pulse"/></svg></div><h3>Instabilidade</h3><p>Variações na conexão durante a partida atrapalham quem precisa de consistência para jogar.</p></div>
-      <div class="card rv"><div class="ibox ibox-amber"><svg class="ic"><use href="#i-dl"/></svg></div><h3>Download demorado</h3><p>Jogos e atualizações cada vez maiores pedem velocidade para baixar e voltar a jogar.</p></div>
+    <div class="grid mini">
+      <div class="card rv"><div class="ibox ibox-p"><svg class="ic"><use href="#i-signal"/></svg></div><h3>Ping alto</h3><p>Seu comando demora a chegar ao servidor.</p></div>
+      <div class="card rv"><div class="ibox ibox-p"><svg class="ic"><use href="#i-pkx"/></svg></div><h3>Perda de pacotes</h3><p>Travadas e ações que não registram.</p></div>
+      <div class="card rv"><div class="ibox ibox-p"><svg class="ic"><use href="#i-pulse"/></svg></div><h3>Instabilidade</h3><p>Oscilações no meio da partida.</p></div>
+      <div class="card rv"><div class="ibox ibox-p"><svg class="ic"><use href="#i-dl"/></svg></div><h3>Download lento</h3><p>Jogos e atualizações cada vez maiores.</p></div>
     </div>
     <div class="combo-strip rv">
-      <p>Por isso, os planos Gamer da Gironet combinam <b class="hl">alta velocidade</b>, <b class="hl-c">rotas com priorização de tráfego para jogos</b> e <b class="hl">licença do ExitLag</b>.</p>
+      <p>Os planos Gamer juntam <span class="hl">velocidade</span>, <span class="hl-c">rotas priorizadas</span> e <span class="hl">ExitLag</span>.</p>
       <a class="btn btn-ghost" href="#planos">Ver os planos<svg class="ic"><use href="#i-arrow"/></svg></a>
     </div>
   </div>
@@ -490,30 +517,28 @@ html.js .rv.in{opacity:1;transform:none}
   <div class="wrap">
     <div class="sec-head center rv">
       <span class="eyebrow">Planos Gamer</span>
-      <h2>Escolha o seu plano Gamer</h2>
-      <p class="lead">Os dois planos têm velocidade simétrica, ExitLag incluso e instalação cabeada para o seu PC ou console.</p>
+      <h2>Escolha o seu plano <span class="hl">Gamer</span></h2>
     </div>
-    <div class="diff rv"><b>+ R$ 20,00</b><span>por mês para sair de 800 Mega e ir para 1 Giga</span></div>
+    <div class="diff rv"><b>+ R$ 20,00</b><span>por mês e você vai de 800 Mega para 1 Giga</span></div>
 
     <div class="plans">
       <div class="plan-wrap rv" id="plano-ultra">
         <article class="plan"><div class="plan-in">
           <div class="plan-top"><h3 class="plan-name">Combo<b>Ultra Gamer</b></h3></div>
           <div class="plan-speed">800<small>MEGA</small></div>
-          <div class="sym"><span><svg class="ic"><use href="#i-down"/></svg>800 Mbps download</span><span><svg class="ic"><use href="#i-up"/></svg>800 Mbps upload</span></div>
+          <div class="sym"><svg class="ic"><use href="#i-sym"/></svg>800 Mbps de download e de upload</div>
           <div class="price"><span class="cur">R$</span><b>169</b><span class="cts">,90<em>/MÊS</em></span></div>
-          <p class="plan-desc">Uma opção para quem busca alta velocidade, conexão para jogos online e capacidade para downloads, uploads e transmissões.</p>
+          <p class="plan-desc">Para jogar, baixar e transmitir com folga.</p>
           <ul class="checks">
-            <li><svg class="ic"><use href="#i-check"/></svg><span><b>800 Mbps de download e 800 Mbps de upload</b></span></li>
-            <li><svg class="ic"><use href="#i-check"/></svg><span>Garantia de 80% da velocidade contratada, conforme as condições aplicáveis</span></li>
-            <li><svg class="ic"><use href="#i-check"/></svg><span><b>Trânsito Premium</b>, com rotas que priorizam o tráfego para servidores de jogos populares</span></li>
-            <li><svg class="ic"><use href="#i-check"/></svg><span><b>Licença ExitLag</b> inclusa na assinatura</span></li>
-            <li><svg class="ic"><use href="#i-check"/></svg><span>Instalação VIP Gamer com até dois cabos de rede RJ-45</span></li>
+            <li><svg class="ic"><use href="#i-check"/></svg><span><b>ExitLag incluso</b></span></li>
+            <li><svg class="ic"><use href="#i-check"/></svg><span><b>Trânsito Premium:</b> rotas priorizadas para jogos</span></li>
+            <li><svg class="ic"><use href="#i-check"/></svg><span>Instalação VIP com até 2 cabos de rede</span></li>
+            <li><svg class="ic"><use href="#i-check"/></svg><span>Roteador dual-band gigabit</span></li>
             <li><svg class="ic"><use href="#i-check"/></svg><span>IPv6 nativo</span></li>
-            <li><svg class="ic"><use href="#i-check"/></svg><span>Roteador dual-band gigabit de alta performance</span></li>
-            <li><svg class="ic"><use href="#i-check"/></svg><span>Watch TV e Digilivros inclusos</span></li>
+            <li><svg class="ic"><use href="#i-check"/></svg><span>Watch TV e Digilivros</span></li>
+            <li><svg class="ic"><use href="#i-check"/></svg><span>Garantia de 80% da velocidade*</span></li>
           </ul>
-          <p class="plan-fid">Fidelidade prevista de 12 meses, conforme o termo de contratação da Gironet.</p>
+          <p class="plan-fid">Fidelidade de 12 meses. *Conforme as condições de contratação.</p>
           <a class="btn btn-ghost btn-block" href="https://wa.me/5513997049248?text=Ol%C3%A1%21%20Quero%20contratar%20o%20Combo%20Ultra%20Gamer%20800%20Mega%20%28R%24%20169%2C90/m%C3%AAs%29%20com%20ExitLag." target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg>Quero o Ultra Gamer</a>
         </div></article>
       </div>
@@ -522,20 +547,19 @@ html.js .rv.in{opacity:1;transform:none}
         <article class="plan"><div class="plan-in">
           <div class="plan-top"><h3 class="plan-name">Combo<b>Premium Gamer</b></h3><span class="plan-badge">Maior velocidade</span></div>
           <div class="plan-speed">1<small>GIGA</small></div>
-          <div class="sym"><span><svg class="ic"><use href="#i-down"/></svg>1.000 Mbps download</span><span><svg class="ic"><use href="#i-up"/></svg>1.000 Mbps upload</span></div>
+          <div class="sym"><svg class="ic"><use href="#i-sym"/></svg>1.000 Mbps de download e de upload</div>
           <div class="price"><span class="cur">R$</span><b>189</b><span class="cts">,90<em>/MÊS</em></span></div>
-          <p class="plan-desc">Para quem busca a maior velocidade dos planos Gamer da Gironet, seja para baixar jogos, jogar online, transmitir partidas ou usar vários dispositivos conectados.</p>
+          <p class="plan-desc">A maior velocidade da linha Gamer.</p>
           <ul class="checks">
-            <li><svg class="ic"><use href="#i-check"/></svg><span><b>1.000 Mbps de download e 1.000 Mbps de upload</b></span></li>
-            <li><svg class="ic"><use href="#i-check"/></svg><span>Garantia de 80% da velocidade contratada, conforme as condições aplicáveis</span></li>
-            <li><svg class="ic"><use href="#i-check"/></svg><span><b>Trânsito Premium</b>, com rotas que priorizam o tráfego para servidores de jogos populares</span></li>
-            <li><svg class="ic"><use href="#i-check"/></svg><span><b>Licença ExitLag</b> inclusa na assinatura</span></li>
-            <li><svg class="ic"><use href="#i-check"/></svg><span>Instalação VIP Gamer com até dois cabos de rede RJ-45</span></li>
+            <li><svg class="ic"><use href="#i-check"/></svg><span><b>ExitLag incluso</b></span></li>
+            <li><svg class="ic"><use href="#i-check"/></svg><span><b>Trânsito Premium:</b> rotas priorizadas para jogos</span></li>
+            <li><svg class="ic"><use href="#i-check"/></svg><span>Instalação VIP com até 2 cabos de rede</span></li>
+            <li><svg class="ic"><use href="#i-check"/></svg><span>Roteador dual-band gigabit</span></li>
             <li><svg class="ic"><use href="#i-check"/></svg><span>IPv6 nativo</span></li>
-            <li><svg class="ic"><use href="#i-check"/></svg><span>Roteador dual-band gigabit de alta performance</span></li>
-            <li><svg class="ic"><use href="#i-check"/></svg><span>Watch TV e Digilivros inclusos</span></li>
+            <li><svg class="ic"><use href="#i-check"/></svg><span>Watch TV e Digilivros</span></li>
+            <li><svg class="ic"><use href="#i-check"/></svg><span>Garantia de 80% da velocidade*</span></li>
           </ul>
-          <p class="plan-fid">Fidelidade prevista de 12 meses, conforme o termo de contratação da Gironet.</p>
+          <p class="plan-fid">Fidelidade de 12 meses. *Conforme as condições de contratação.</p>
           <a class="btn btn-primary btn-block" href="https://wa.me/5513997049248?text=Ol%C3%A1%21%20Quero%20contratar%20o%20Combo%20Premium%20Gamer%201%20Giga%20%28R%24%20189%2C90/m%C3%AAs%29%20com%20ExitLag." target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg>Quero o Premium Gamer</a>
         </div></article>
       </div>
@@ -553,23 +577,22 @@ html.js .rv.in{opacity:1;transform:none}
     <div class="tbl-wrap rv">
       <table>
         <thead>
-          <tr><th scope="col">Benefício</th><th scope="col"><small>Combo</small>Ultra Gamer</th><th scope="col" class="hot-col"><small>Combo</small>Premium Gamer</th></tr>
+          <tr><th scope="col">Benefício</th><th scope="col" class="u"><small>Combo</small>Ultra Gamer</th><th scope="col" class="hot-col"><small>Combo</small>Premium Gamer</th></tr>
         </thead>
         <tbody>
-          <tr class="dif"><td>Download</td><td>800 Mbps</td><td class="hot-col">1.000 Mbps</td></tr>
-          <tr class="dif"><td>Upload</td><td>800 Mbps</td><td class="hot-col">1.000 Mbps</td></tr>
-          <tr><td>ExitLag incluso</td><td><svg class="ic" role="img" aria-label="Sim"><use href="#i-check"/></svg></td><td class="hot-col"><svg class="ic" role="img" aria-label="Sim"><use href="#i-check"/></svg></td></tr>
-          <tr><td>Trânsito Premium</td><td><svg class="ic" role="img" aria-label="Sim"><use href="#i-check"/></svg></td><td class="hot-col"><svg class="ic" role="img" aria-label="Sim"><use href="#i-check"/></svg></td></tr>
-          <tr><td>Instalação VIP Gamer</td><td><svg class="ic" role="img" aria-label="Sim"><use href="#i-check"/></svg></td><td class="hot-col"><svg class="ic" role="img" aria-label="Sim"><use href="#i-check"/></svg></td></tr>
-          <tr><td>Até dois pontos cabeados</td><td><svg class="ic" role="img" aria-label="Sim"><use href="#i-check"/></svg></td><td class="hot-col"><svg class="ic" role="img" aria-label="Sim"><use href="#i-check"/></svg></td></tr>
-          <tr><td>IPv6 nativo</td><td><svg class="ic" role="img" aria-label="Sim"><use href="#i-check"/></svg></td><td class="hot-col"><svg class="ic" role="img" aria-label="Sim"><use href="#i-check"/></svg></td></tr>
-          <tr><td>Watch TV e Digilivros</td><td><svg class="ic" role="img" aria-label="Sim"><use href="#i-check"/></svg></td><td class="hot-col"><svg class="ic" role="img" aria-label="Sim"><use href="#i-check"/></svg></td></tr>
-          <tr class="dif"><td>Mensalidade</td><td>R$ 169,90</td><td class="hot-col">R$ 189,90</td></tr>
+          <tr class="dif"><td>Download</td><td class="u">800 Mbps</td><td class="hot-col">1.000 Mbps</td></tr>
+          <tr class="dif"><td>Upload</td><td class="u">800 Mbps</td><td class="hot-col">1.000 Mbps</td></tr>
+          <tr><td>ExitLag incluso</td><td class="u"><svg class="ic" role="img" aria-label="Sim"><use href="#i-check"/></svg></td><td class="hot-col"><svg class="ic" role="img" aria-label="Sim"><use href="#i-check"/></svg></td></tr>
+          <tr><td>Trânsito Premium</td><td class="u"><svg class="ic" role="img" aria-label="Sim"><use href="#i-check"/></svg></td><td class="hot-col"><svg class="ic" role="img" aria-label="Sim"><use href="#i-check"/></svg></td></tr>
+          <tr><td>Instalação VIP (2 cabos)</td><td class="u"><svg class="ic" role="img" aria-label="Sim"><use href="#i-check"/></svg></td><td class="hot-col"><svg class="ic" role="img" aria-label="Sim"><use href="#i-check"/></svg></td></tr>
+          <tr><td>IPv6 nativo</td><td class="u"><svg class="ic" role="img" aria-label="Sim"><use href="#i-check"/></svg></td><td class="hot-col"><svg class="ic" role="img" aria-label="Sim"><use href="#i-check"/></svg></td></tr>
+          <tr><td>Watch TV e Digilivros</td><td class="u"><svg class="ic" role="img" aria-label="Sim"><use href="#i-check"/></svg></td><td class="hot-col"><svg class="ic" role="img" aria-label="Sim"><use href="#i-check"/></svg></td></tr>
+          <tr class="dif"><td>Mensalidade</td><td class="u">R$ 169,90</td><td class="hot-col">R$ 189,90</td></tr>
         </tbody>
       </table>
     </div>
     <div class="tbl-after rv">
-      <p>Os dois planos oferecem os mesmos benefícios adicionais. A principal diferença está na velocidade e no valor mensal. Escolha a opção que melhor atende às suas necessidades.</p>
+      <p>Os benefícios são os mesmos. Muda só a velocidade e o preço.</p>
       <div class="btns" style="justify-content:center">
         <a class="btn btn-ghost" href="https://wa.me/5513997049248?text=Ol%C3%A1%21%20Quero%20contratar%20o%20Combo%20Ultra%20Gamer%20800%20Mega%20%28R%24%20169%2C90/m%C3%AAs%29%20com%20ExitLag." target="_blank" rel="noopener">Contratar Ultra Gamer</a>
         <a class="btn btn-primary" href="https://wa.me/5513997049248?text=Ol%C3%A1%21%20Quero%20contratar%20o%20Combo%20Premium%20Gamer%201%20Giga%20%28R%24%20189%2C90/m%C3%AAs%29%20com%20ExitLag." target="_blank" rel="noopener">Contratar Premium Gamer</a>
@@ -584,20 +607,19 @@ html.js .rv.in{opacity:1;transform:none}
     <div class="ex-grid">
       <div class="ex-body rv">
         <span class="eyebrow">O que é o ExitLag?</span>
-        <h2>Entenda como o ExitLag pode melhorar sua experiência nos jogos.</h2>
-        <p>O ExitLag é um software de otimização de conexão para jogos online. Ele analisa as rotas utilizadas pelos dados e pode buscar caminhos alternativos entre o jogador e o servidor do jogo. Dependendo das condições da rede e do servidor, essa otimização pode ajudar a reduzir o ping, diminuir a perda de pacotes e melhorar a estabilidade da conexão.</p>
-        <p>Nos planos Gamer da Gironet, <b>a licença do ExitLag está inclusa na assinatura</b>, conforme as condições do serviço.</p>
-        <ul class="blist">
-          <li><div class="ibox"><svg class="ic"><use href="#i-route"/></svg></div><div><b>Otimização de rotas</b><span>Busca caminhos alternativos para a conexão com servidores de jogos compatíveis.</span></div></li>
-          <li><div class="ibox"><svg class="ic"><use href="#i-signal"/></svg></div><div><b>Redução de ping</b><span>Pode diminuir o tempo de resposta quando identifica uma rota mais eficiente.</span></div></li>
-          <li><div class="ibox"><svg class="ic"><use href="#i-pkx"/></svg></div><div><b>Redução da perda de pacotes</b><span>Pode ajudar a evitar que dados deixem de chegar corretamente ao destino.</span></div></li>
-          <li><div class="ibox"><svg class="ic"><use href="#i-pulse"/></svg></div><div><b>Estabilidade</b><span>Pode contribuir para uma conexão mais consistente durante as partidas.</span></div></li>
-          <li><div class="ibox ibox-green"><svg class="ic"><use href="#i-zap"/></svg></div><div><b>Mais praticidade</b><span>A licença está inclusa no plano, sem a necessidade de contratar esse benefício separadamente.</span></div></li>
-        </ul>
-        <div class="note"><svg class="ic"><use href="#i-info"/></svg><span>Os resultados variam conforme o jogo, o servidor e as condições da rede. O ExitLag não garante ping baixo em todas as situações e não aumenta diretamente a velocidade contratada da internet.</span></div>
+        <h2>Ele procura a <span class="hl">melhor rota</span> até o servidor do jogo.</h2>
+        <p>O ExitLag é um software que analisa o caminho dos seus dados e, quando encontra uma rota mais eficiente, passa a usar essa rota.</p>
+        <p><b>A licença já vem no plano Gamer</b>, sem contratar à parte.</p>
+        <div class="btiles">
+          <div class="btile"><div class="ibox"><svg class="ic"><use href="#i-route"/></svg></div>Busca rotas alternativas</div>
+          <div class="btile"><div class="ibox"><svg class="ic"><use href="#i-signal"/></svg></div>Pode reduzir o ping</div>
+          <div class="btile"><div class="ibox ibox-v"><svg class="ic"><use href="#i-pkx"/></svg></div>Pode reduzir a perda de pacotes</div>
+          <div class="btile"><div class="ibox ibox-g"><svg class="ic"><use href="#i-pulse"/></svg></div>Pode deixar a conexão mais estável</div>
+        </div>
+        <div class="note"><svg class="ic"><use href="#i-info"/></svg><span>Os resultados variam conforme o jogo, o servidor e a rede. O ExitLag não garante ping baixo e não aumenta a velocidade do plano.</span></div>
       </div>
 
-      <div class="route-card rv" aria-hidden="true">
+      <div class="route-card rv" aria-hidden="true"><div class="route-b">
         <div class="route-in route">
           <div class="route-title"><span>Rotas até o servidor</span><i>● ExitLag</i></div>
           <svg viewBox="0 0 560 330" role="presentation">
@@ -605,51 +627,52 @@ html.js .rv.in{opacity:1;transform:none}
             <path class="r-grey" d="M96 165 L180 82 L290 64 L400 92 L470 165"/>
             <path class="r-grey" d="M96 165 L190 165 L290 186 L390 160 L470 165"/>
             <!-- rota escolhida -->
-            <path class="r-best" id="best" d="M96 165 L196 250 L300 266 L404 236 L470 165"/>
+            <path class="r-best" d="M96 165 L196 250 L300 266 L404 236 L470 165"/>
             <path class="r-flow" d="M96 165 L196 250 L300 266 L404 236 L470 165"/>
             <!-- pontos intermediários -->
             <g class="hop">
               <circle cx="180" cy="82" r="8"/><circle cx="290" cy="64" r="8"/><circle cx="400" cy="92" r="8"/>
               <circle cx="190" cy="165" r="8"/><circle cx="290" cy="186" r="8"/><circle cx="390" cy="160" r="8"/>
             </g>
-            <g fill="#20273a" stroke="#85c647" stroke-width="3">
+            <g class="srv" fill="#1f2643" stroke="#96ff40" stroke-width="3">
               <circle cx="196" cy="250" r="9"/><circle cx="300" cy="266" r="9"/><circle cx="404" cy="236" r="9"/>
             </g>
             <!-- pacote viajando -->
-            <circle class="pk" r="6" fill="#e9ffd2" style="offset-path:path('M96 165 L196 250 L300 266 L404 236 L470 165')"/>
+            <circle class="pk" r="6" fill="#f0ffe0" style="offset-path:path('M96 165 L196 250 L300 266 L404 236 L470 165')"/>
             <!-- jogador -->
-            <circle class="node-ring" cx="62" cy="165" r="40" stroke="#45d3f3"/>
-            <svg x="38" y="141" width="48" height="48" style="color:#45d3f3"><use href="#i-pad"/></svg>
-            <text class="tn" x="62" y="236" text-anchor="middle" fill="#eef2f8">Você</text>
+            <circle class="node-ring" cx="62" cy="165" r="40" stroke="#22e4ff"/>
+            <svg x="38" y="141" width="48" height="48" style="color:#22e4ff"><use href="#i-pad"/></svg>
+            <text class="tn" x="62" y="236" text-anchor="middle" fill="#f2f5ff">Você</text>
             <!-- servidor -->
-            <rect x="470" y="122" width="78" height="86" rx="12" fill="#20273a" stroke="#85c647" stroke-width="2.5"/>
-            <g stroke="#85c647" stroke-width="2.2" stroke-linecap="round" fill="none">
-              <rect x="486" y="138" width="46" height="20" rx="4"/><rect x="486" y="170" width="46" height="20" rx="4"/>
-              <line x1="495" y1="148" x2="495.01" y2="148"/><line x1="495" y1="180" x2="495.01" y2="180"/>
+            <g class="srv">
+              <rect x="470" y="122" width="78" height="86" rx="12" fill="#1f2643" stroke="#96ff40" stroke-width="2.5"/>
+              <g stroke="#96ff40" stroke-width="2.2" stroke-linecap="round" fill="none">
+                <rect x="486" y="138" width="46" height="20" rx="4"/><rect x="486" y="170" width="46" height="20" rx="4"/>
+                <line x1="495" y1="148" x2="495.01" y2="148"/><line x1="495" y1="180" x2="495.01" y2="180"/>
+              </g>
             </g>
-            <text class="tn" x="509" y="236" text-anchor="middle" fill="#eef2f8">Servidor</text>
-            <text class="tn" x="509" y="258" text-anchor="middle" fill="#eef2f8">do jogo</text>
+            <text class="tn" x="509" y="236" text-anchor="middle" fill="#f2f5ff">Servidor</text>
+            <text class="tn" x="509" y="258" text-anchor="middle" fill="#f2f5ff">do jogo</text>
             <!-- rótulos -->
-            <text class="tl" x="290" y="38" text-anchor="middle" fill="#7f8aa1">rota possível</text>
-            <text class="tl" x="290" y="216" text-anchor="middle" fill="#7f8aa1">rota possível</text>
-            <text class="tl" x="300" y="306" text-anchor="middle" fill="#85c647">rota escolhida pelo ExitLag</text>
+            <text class="tl" x="290" y="38" text-anchor="middle" fill="#8a95b8">rota possível</text>
+            <text class="tl" x="290" y="216" text-anchor="middle" fill="#8a95b8">rota possível</text>
+            <text class="tl" x="300" y="306" text-anchor="middle" fill="#96ff40">rota escolhida pelo ExitLag</text>
           </svg>
-          <div class="legend"><span><i></i>Caminhos possíveis</span><span><i class="g"></i>Rota otimizada, quando há uma alternativa adequada</span></div>
+          <div class="legend"><span><i></i>Caminhos possíveis</span><span><i class="g"></i>Rota otimizada, quando houver uma melhor</span></div>
         </div>
-      </div>
+      </div></div>
     </div>
 
     <!-- 6. COMO FUNCIONA -->
     <div class="steps-head rv">
-      <span class="eyebrow">Como funciona o ExitLag?</span>
-      <h3>Como a otimização acontece?</h3>
+      <span class="eyebrow">Como funciona</span>
+      <h3>A otimização em 3 passos</h3>
     </div>
     <div class="steps">
-      <div class="step rv"><h4>Análise da conexão</h4><p>O ExitLag identifica rotas possíveis entre o jogador e o servidor do jogo.</p></div>
-      <div class="step rv"><h4>Busca por rotas alternativas</h4><p>O software procura caminhos que possam oferecer um trajeto mais eficiente para os dados.</p></div>
-      <div class="step rv"><h4>Otimização da conexão</h4><p>Quando há uma alternativa adequada, o software pode utilizá-la para melhorar o desempenho da conexão.</p></div>
+      <div class="step rv"><h4>Analisa</h4><p>Mapeia as rotas entre você e o servidor do jogo.</p></div>
+      <div class="step rv"><h4>Compara</h4><p>Procura um caminho mais eficiente para os dados.</p></div>
+      <div class="step rv"><h4>Otimiza</h4><p>Usa a rota alternativa quando ela for melhor.</p></div>
     </div>
-    <p class="fine rv" style="margin-top:18px">O resultado depende das condições de cada rede e jogo.</p>
   </div>
 </section>
 
@@ -658,24 +681,15 @@ html.js .rv.in{opacity:1;transform:none}
   <div class="wrap">
     <div class="sec-head rv">
       <span class="eyebrow">Gironet + ExitLag</span>
-      <h2>Internet e otimização de conexão em um só plano.</h2>
-      <p class="lead">Os planos Gamer da Gironet combinam alta velocidade, rotas com priorização de tráfego para jogos e licença ExitLag inclusa. Assim, você reúne recursos para sua conexão sem precisar contratar a licença do software separadamente.</p>
+      <h2>Internet e otimização <span class="hl">num plano só.</span></h2>
     </div>
     <div class="eq rv">
-      <div class="eq-box"><small>Fibra Gironet</small><b>800 Mega ou 1 Giga</b><span>Download e upload simétricos, com Trânsito Premium</span></div>
+      <div class="eq-box"><small>Fibra Gironet</small><b>800 Mega ou 1 Giga</b><span>Simétrica, com Trânsito Premium</span></div>
       <div class="eq-op" aria-hidden="true">+</div>
-      <div class="eq-box"><small>Licença ExitLag</small><b>Otimização de rotas</b><span>Inclusa na assinatura, sem contratar à parte</span></div>
+      <div class="eq-box"><small>Licença ExitLag</small><b>Otimização de rotas</b><span>Inclusa, sem custo à parte</span></div>
       <div class="eq-op" aria-hidden="true">=</div>
       <div class="eq-box eq-res"><small>Plano Gamer</small><b>Tudo em uma assinatura</b><span>A partir de R$ 169,90 por mês</span></div>
     </div>
-    <ul class="adv">
-      <li class="rv"><svg class="ic"><use href="#i-sym"/></svg>Alta velocidade de download e upload</li>
-      <li class="rv"><svg class="ic"><use href="#i-route"/></svg>Rotas com priorização de tráfego para servidores de jogos populares</li>
-      <li class="rv"><svg class="ic"><use href="#i-zap"/></svg>ExitLag incluso na assinatura</li>
-      <li class="rv"><svg class="ic"><use href="#i-eth"/></svg>Instalação com até dois pontos cabeados</li>
-      <li class="rv"><svg class="ic"><use href="#i-router"/></svg>Roteador dual-band gigabit</li>
-      <li class="rv"><svg class="ic"><use href="#i-tv"/></svg>Watch TV e Digilivros inclusos</li>
-    </ul>
     <a class="btn btn-primary rv" href="#planos">Escolher meu plano<svg class="ic"><use href="#i-arrow"/></svg></a>
   </div>
 </section>
@@ -686,52 +700,52 @@ html.js .rv.in{opacity:1;transform:none}
     <div class="inst-art rv" aria-hidden="true">
       <svg viewBox="0 0 520 330">
         <!-- cabos -->
-        <path class="cable" stroke="#85c647" d="M232 118 C 232 190, 110 160, 110 228"/>
+        <path class="cable cable-g" d="M232 118 C 232 190, 110 160, 110 228"/>
         <path class="cable-flow" d="M232 118 C 232 190, 110 160, 110 228"/>
-        <path class="cable" stroke="#45d3f3" d="M288 118 C 288 190, 410 160, 410 228"/>
+        <path class="cable cable-c" d="M288 118 C 288 190, 410 160, 410 228"/>
         <path class="cable-flow" d="M288 118 C 288 190, 410 160, 410 228"/>
         <!-- etiquetas de metragem -->
         <g font-size="20">
-          <rect x="92" y="142" width="120" height="38" rx="19" fill="#1e2433" stroke="#85c647" stroke-width="2"/>
-          <text x="152" y="168" text-anchor="middle" fill="#85c647">até 10 m</text>
-          <rect x="308" y="142" width="120" height="38" rx="19" fill="#1e2433" stroke="#45d3f3" stroke-width="2"/>
-          <text x="368" y="168" text-anchor="middle" fill="#45d3f3">até 10 m</text>
+          <rect class="glow-g" x="92" y="142" width="120" height="38" rx="19" fill="#1c2137" stroke="#96ff40" stroke-width="2"/>
+          <text x="152" y="168" text-anchor="middle" fill="#96ff40">até 10 m</text>
+          <rect class="glow-c" x="308" y="142" width="120" height="38" rx="19" fill="#1c2137" stroke="#22e4ff" stroke-width="2"/>
+          <text x="368" y="168" text-anchor="middle" fill="#22e4ff">até 10 m</text>
         </g>
         <!-- roteador -->
         <g>
-          <line x1="214" y1="62" x2="200" y2="20" stroke="#a8b2c6" stroke-width="4" stroke-linecap="round"/>
-          <line x1="306" y1="62" x2="320" y2="20" stroke="#a8b2c6" stroke-width="4" stroke-linecap="round"/>
-          <rect x="190" y="60" width="140" height="60" rx="12" fill="#2c344a" stroke="#a8b2c6" stroke-width="2"/>
-          <circle cx="212" cy="90" r="4" fill="#85c647"/><circle cx="226" cy="90" r="4" fill="#85c647"/><circle cx="240" cy="90" r="4" fill="#45d3f3"/>
-          <rect x="222" y="110" width="20" height="12" rx="2" fill="#85c647"/>
-          <rect x="278" y="110" width="20" height="12" rx="2" fill="#45d3f3"/>
-          <text x="296" y="97" text-anchor="middle" font-size="16" fill="#a8b2c6">WI-FI</text>
+          <line x1="214" y1="62" x2="200" y2="20" stroke="#b0bad8" stroke-width="4" stroke-linecap="round"/>
+          <line x1="306" y1="62" x2="320" y2="20" stroke="#b0bad8" stroke-width="4" stroke-linecap="round"/>
+          <rect x="190" y="60" width="140" height="60" rx="12" fill="#2b3356" stroke="#a463ff" stroke-width="2" style="filter:drop-shadow(0 0 8px rgba(164,99,255,.6))"/>
+          <circle class="glow-g" cx="212" cy="90" r="4" fill="#96ff40"/><circle class="glow-g" cx="226" cy="90" r="4" fill="#96ff40"/><circle class="glow-c" cx="240" cy="90" r="4" fill="#22e4ff"/>
+          <rect x="222" y="110" width="20" height="12" rx="2" fill="#96ff40"/>
+          <rect x="278" y="110" width="20" height="12" rx="2" fill="#22e4ff"/>
+          <text x="296" y="97" text-anchor="middle" font-size="16" fill="#b0bad8">WI-FI</text>
         </g>
         <!-- PC -->
         <g>
-          <rect x="52" y="228" width="116" height="72" rx="8" fill="#2c344a" stroke="#85c647" stroke-width="2"/>
-          <rect x="62" y="238" width="96" height="52" rx="4" fill="#1e2433"/>
-          <polyline points="74 272 92 258 106 268 124 250 146 262" fill="none" stroke="#85c647" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-          <text x="110" y="326" text-anchor="middle" font-size="21" fill="#eef2f8">PC</text>
+          <rect class="glow-g" x="52" y="228" width="116" height="72" rx="8" fill="#2b3356" stroke="#96ff40" stroke-width="2"/>
+          <rect x="62" y="238" width="96" height="52" rx="4" fill="#1c2137"/>
+          <polyline points="74 272 92 258 106 268 124 250 146 262" fill="none" stroke="#96ff40" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="110" y="326" text-anchor="middle" font-size="21" fill="#f2f5ff">PC</text>
         </g>
         <!-- console -->
         <g>
-          <rect x="352" y="228" width="116" height="72" rx="10" fill="#2c344a" stroke="#45d3f3" stroke-width="2"/>
-          <svg x="380" y="234" width="60" height="60" style="color:#45d3f3"><use href="#i-pad"/></svg>
-          <text x="410" y="326" text-anchor="middle" font-size="21" fill="#eef2f8">Console</text>
+          <rect class="glow-c" x="352" y="228" width="116" height="72" rx="10" fill="#2b3356" stroke="#22e4ff" stroke-width="2"/>
+          <svg x="380" y="234" width="60" height="60" style="color:#22e4ff"><use href="#i-pad"/></svg>
+          <text x="410" y="326" text-anchor="middle" font-size="21" fill="#f2f5ff">Console</text>
         </g>
       </svg>
     </div>
     <div class="rv">
       <span class="eyebrow">Instalação VIP Gamer</span>
-      <h2>Conecte seu equipamento diretamente ao roteador.</h2>
-      <p class="lead">Os planos incluem uma instalação voltada para quem deseja conectar o computador ou console por cabo de rede, uma alternativa que pode oferecer mais estabilidade do que o Wi-Fi. O técnico da Gironet pode instalar até dois cabos RJ-45 para conectar equipamentos como PC, PlayStation e Xbox.</p>
+      <h2>PC e console <span class="hl">no cabo</span>, direto no roteador.</h2>
+      <p class="lead">O técnico instala até 2 cabos de rede (<span style="white-space:nowrap">RJ-45</span>). No cabo, a conexão costuma ser mais estável que no Wi-Fi.</p>
       <ul class="cond">
-        <li><span class="num">2</span><div><b>Até dois equipamentos cabeados</b><span>PC, PlayStation, Xbox ou outro equipamento com entrada de rede</span></div></li>
-        <li><span class="num">10 m</span><div><b>Até 10 metros por cabo</b><span>Inclusos na instalação</span></div></li>
-        <li><span class="num">R$ 20</span><div><b>Por metro excedente</b><span>Cada metro além dos 10 metros custa R$ 20,00</span></div></li>
+        <li><span class="num">2</span><div><b>Equipamentos no cabo</b><span>PC, PlayStation, Xbox e outros</span></div></li>
+        <li><span class="num">10 m</span><div><b>Por cabo</b><span>Inclusos na instalação</span></div></li>
+        <li><span class="num">R$ 20</span><div><b>Por metro a mais</b><span>Acima dos 10 m de cada cabo</span></div></li>
       </ul>
-      <p class="example"><b>Exemplo:</b> se o seu console fica a 13 metros do roteador, são 3 metros além do incluso, ou seja, 3 × R$ 20,00 = <b>R$ 60,00</b>.</p>
+      <p class="example"><b>Exemplo:</b> console a 13 m do roteador = 3 m a mais = <b>R$ 60,00</b>.</p>
     </div>
   </div>
 </section>
@@ -741,15 +755,15 @@ html.js .rv.in{opacity:1;transform:none}
   <div class="wrap">
     <div class="sec-head rv">
       <span class="eyebrow">Recursos da conexão</span>
-      <h2>O que vem na sua conexão Gamer.</h2>
+      <h2>O que vem na sua conexão <span class="hl">Gamer.</span></h2>
     </div>
-    <div class="grid g2 g4 feat">
-      <div class="card rv"><div class="ibox ibox-green"><svg class="ic"><use href="#i-sym"/></svg></div><h3>Velocidade simétrica</h3><p>A mesma velocidade nominal de download e upload: 800 Mbps no Ultra Gamer e 1.000 Mbps no Premium Gamer.</p></div>
-      <div class="card rv"><div class="ibox"><svg class="ic"><use href="#i-globe"/></svg></div><h3>IPv6 nativo</h3><p>Protocolo de internet que permite a comunicação entre dispositivos em redes compatíveis.</p></div>
-      <div class="card rv"><div class="ibox"><svg class="ic"><use href="#i-wifi"/></svg></div><h3>Wi-Fi Turbo</h3><p>Roteador dual-band gigabit de alta performance, com suporte às bandas de 2,4 GHz e 5 GHz, conforme as especificações do equipamento fornecido.</p></div>
-      <div class="card rv"><div class="ibox ibox-green"><svg class="ic"><use href="#i-route"/></svg></div><h3>Trânsito Premium</h3><p>Recurso da Gironet que utiliza rotas com priorização de tráfego para servidores de jogos populares.</p></div>
+    <div class="grid mini">
+      <div class="card rv"><div class="ibox ibox-g"><svg class="ic"><use href="#i-sym"/></svg></div><h3>Simétrica</h3><p>Mesma velocidade para baixar e enviar.</p></div>
+      <div class="card rv"><div class="ibox"><svg class="ic"><use href="#i-globe"/></svg></div><h3>IPv6 nativo</h3><p>A versão mais atual do protocolo de internet.</p></div>
+      <div class="card rv"><div class="ibox ibox-v"><svg class="ic"><use href="#i-wifi"/></svg></div><h3>Wi-Fi Turbo</h3><p>Roteador dual-band gigabit, 2,4 e 5 GHz.</p></div>
+      <div class="card rv"><div class="ibox ibox-g"><svg class="ic"><use href="#i-route"/></svg></div><h3>Trânsito Premium</h3><p>Rotas priorizadas para servidores de jogos.</p></div>
     </div>
-    <p class="fine rv" style="margin-top:22px">A velocidade efetiva e o desempenho da conexão dependem das condições da rede, dos equipamentos utilizados e dos servidores acessados.</p>
+    <p class="fine rv" style="margin-top:18px">O desempenho depende da rede, dos equipamentos e dos servidores acessados.</p>
   </div>
 </section>
 
@@ -758,20 +772,16 @@ html.js .rv.in{opacity:1;transform:none}
   <div class="wrap">
     <div class="sec-head rv">
       <span class="eyebrow">Inclusos nos dois planos</span>
-      <h2>Sua assinatura oferece mais opções.</h2>
+      <h2>E ainda vem <span class="hl">entretenimento.</span></h2>
     </div>
     <div class="extras">
       <div class="extra rv">
         <div class="ibox"><svg class="ic"><use href="#i-tv"/></svg></div>
-        <h3>Watch TV</h3>
-        <p>Acesso ao serviço de streaming Watch TV, incluso nos dois planos Gamer. Consulte com a equipe Gironet os conteúdos e os dispositivos compatíveis.</p>
-        <span class="pill">Incluso no Ultra e no Premium</span>
+        <div><h3>Watch TV</h3><p>Streaming incluso. Consulte os conteúdos e os aparelhos compatíveis.</p></div>
       </div>
       <div class="extra g rv">
-        <div class="ibox ibox-green"><svg class="ic"><use href="#i-book"/></svg></div>
-        <h3>Digilivros</h3>
-        <p>Acesso à biblioteca de livros Digilivros, também incluso nos dois planos. Consulte com a equipe Gironet as condições de acesso.</p>
-        <span class="pill">Incluso no Ultra e no Premium</span>
+        <div class="ibox ibox-g"><svg class="ic"><use href="#i-book"/></svg></div>
+        <div><h3>Digilivros</h3><p>Biblioteca de livros digitais inclusa. Consulte as condições de acesso.</p></div>
       </div>
     </div>
   </div>
@@ -782,14 +792,14 @@ html.js .rv.in{opacity:1;transform:none}
   <div class="wrap">
     <div class="sec-head rv">
       <span class="eyebrow">Para quem é</span>
-      <h2>Para quem os planos Gamer são indicados?</h2>
+      <h2>Feito para quem leva o jogo <span class="hl">a sério.</span></h2>
     </div>
-    <div class="grid g2 who">
-      <div class="card rv"><div class="ibox ibox-green"><svg class="ic"><use href="#i-trophy"/></svg></div><div><h3>Quem joga competitivamente</h3><p>Pode aproveitar os recursos de conexão e otimização de rotas para buscar mais estabilidade nas partidas.</p></div></div>
-      <div class="card rv"><div class="ibox"><svg class="ic"><use href="#i-pad"/></svg></div><div><h3>Quem joga no PC ou console</h3><p>Pode usar a instalação cabeada inclusa para conectar os equipamentos diretamente ao roteador.</p></div></div>
-      <div class="card rv"><div class="ibox"><svg class="ic"><use href="#i-live"/></svg></div><div><h3>Quem faz transmissões ao vivo</h3><p>Conta com velocidades elevadas de upload, importantes para transmissões. O resultado também depende das configurações e da plataforma utilizada.</p></div></div>
-      <div class="card rv"><div class="ibox"><svg class="ic"><use href="#i-dl"/></svg></div><div><h3>Quem baixa jogos grandes</h3><p>Pode aproveitar a alta velocidade para reduzir o tempo de download, conforme a capacidade do servidor de origem.</p></div></div>
-      <div class="card rv"><div class="ibox ibox-green"><svg class="ic"><use href="#i-users"/></svg></div><div><h3>Quem divide a internet</h3><p>Conta com uma conexão de alta capacidade para diferentes atividades ao mesmo tempo, conforme a demanda dos dispositivos conectados.</p></div></div>
+    <div class="grid who">
+      <div class="card rv"><div class="ibox ibox-g"><svg class="ic"><use href="#i-trophy"/></svg></div><h3>Joga competitivo</h3><p>Busca mais estabilidade nas partidas.</p></div>
+      <div class="card rv"><div class="ibox"><svg class="ic"><use href="#i-pad"/></svg></div><h3>PC ou console</h3><p>Cabo direto no roteador.</p></div>
+      <div class="card rv"><div class="ibox ibox-v"><svg class="ic"><use href="#i-live"/></svg></div><h3>Faz live</h3><p>Upload alto para transmitir.</p></div>
+      <div class="card rv"><div class="ibox"><svg class="ic"><use href="#i-dl"/></svg></div><h3>Baixa jogos pesados</h3><p>Alta velocidade para downloads.</p></div>
+      <div class="card rv"><div class="ibox ibox-g"><svg class="ic"><use href="#i-users"/></svg></div><h3>Divide a internet</h3><p>Vários aparelhos ao mesmo tempo.</p></div>
     </div>
   </div>
 </section>
@@ -802,22 +812,19 @@ html.js .rv.in{opacity:1;transform:none}
       <h2>Perguntas frequentes</h2>
     </div>
     <div class="faq">
-      <details><summary>O ExitLag está incluso nos planos?<svg class="ic"><use href="#i-chev"/></svg></summary><p>Sim. Os dois planos Gamer incluem uma licença do ExitLag vinculada à assinatura.</p></details>
-      <details><summary>O ExitLag garante ping baixo?<svg class="ic"><use href="#i-chev"/></svg></summary><p>Não. Ele pode otimizar as rotas e melhorar o ping em determinadas condições, mas os resultados variam conforme o jogo, o servidor e a rede.</p></details>
-      <details><summary>Preciso contratar o ExitLag separadamente?<svg class="ic"><use href="#i-chev"/></svg></summary><p>Não. A licença está inclusa nos planos Gamer, conforme as condições de ativação e utilização do serviço.</p></details>
-      <details><summary>Qual é a diferença entre os planos?<svg class="ic"><use href="#i-chev"/></svg></summary><p>O Ultra Gamer oferece 800 Mbps de download e upload por R$ 169,90 mensais. O Premium Gamer oferece 1 Gbps de download e upload por R$ 189,90 mensais. Os demais benefícios são os mesmos.</p></details>
-      <details><summary>Posso jogar pelo Wi-Fi?<svg class="ic"><use href="#i-chev"/></svg></summary><p>Sim. Porém, a conexão cabeada costuma oferecer mais estabilidade e menor variação de latência em condições equivalentes.</p></details>
-      <details><summary>Posso conectar meu PC e meu console por cabo?<svg class="ic"><use href="#i-chev"/></svg></summary><p>Sim. A instalação inclui até dois cabos de rede, com até 10 metros por cabo.</p></details>
-      <details><summary>Quanto custa um cabo maior que 10 metros?<svg class="ic"><use href="#i-chev"/></svg></summary><p>Cada metro excedente custa R$ 20,00. Por exemplo: um cabo de 13 metros tem 3 metros excedentes, ou seja, R$ 60,00.</p></details>
-      <details><summary>Os planos possuem fidelidade?<svg class="ic"><use href="#i-chev"/></svg></summary><p>A condição prevista é de 12 meses. A contratação segue o termo de fidelidade apresentado pela Gironet.</p></details>
-      <details><summary>A velocidade de download é igual à de upload?<svg class="ic"><use href="#i-chev"/></svg></summary><p>Sim. O Ultra Gamer oferece 800 Mbps nos dois sentidos, e o Premium Gamer oferece 1.000 Mbps nos dois sentidos.</p></details>
-      <details><summary>A velocidade será sempre a contratada?<svg class="ic"><use href="#i-chev"/></svg></summary><p>A Gironet oferece garantia de 80% da velocidade contratada, conforme as condições aplicáveis. A velocidade efetiva também depende da rede, dos equipamentos utilizados e dos servidores acessados.</p></details>
-      <details><summary>O roteador está incluso?<svg class="ic"><use href="#i-chev"/></svg></summary><p>Sim. Os planos incluem roteador dual-band gigabit de alta performance. O modelo do equipamento é informado na contratação.</p></details>
-      <details><summary>Os planos incluem entretenimento?<svg class="ic"><use href="#i-chev"/></svg></summary><p>Sim. Os dois incluem Watch TV e Digilivros, conforme as condições de cada serviço.</p></details>
-      <details><summary>O ExitLag funciona em todos os jogos?<svg class="ic"><use href="#i-chev"/></svg></summary><p>A compatibilidade depende dos jogos e das plataformas suportadas. Consulte a lista atualizada nos <a href="https://www.exitlag.com/" target="_blank" rel="noopener">canais oficiais do ExitLag</a>.</p></details>
-      <details><summary>O que acontece se eu cancelar o plano?<svg class="ic"><use href="#i-chev"/></svg></summary><p>O cancelamento segue as condições do contrato. Nesse caso, a Gironet recolhe o cabeamento fornecido na instalação e os equipamentos cedidos, como roteador e ONU. Todas as condições são informadas antes da contratação.</p></details>
+      <details><summary>O ExitLag está incluso?<svg class="ic"><use href="#i-chev"/></svg></summary><p>Sim. Os dois planos Gamer incluem a licença, sem contratar à parte.</p></details>
+      <details><summary>O ExitLag garante ping baixo?<svg class="ic"><use href="#i-chev"/></svg></summary><p>Não. Ele pode melhorar a rota em certas condições, mas o resultado varia conforme o jogo, o servidor e a rede.</p></details>
+      <details><summary>Funciona em todos os jogos?<svg class="ic"><use href="#i-chev"/></svg></summary><p>Depende do jogo e da plataforma. Veja a lista nos <a href="https://www.exitlag.com/" target="_blank" rel="noopener">canais oficiais do ExitLag</a>.</p></details>
+      <details><summary>Qual é a diferença entre os planos?<svg class="ic"><use href="#i-chev"/></svg></summary><p>Só a velocidade e o preço: 800 Mega por R$ 169,90 ou 1 Giga por R$ 189,90, os dois com download igual ao upload.</p></details>
+      <details><summary>Posso jogar pelo Wi-Fi?<svg class="ic"><use href="#i-chev"/></svg></summary><p>Pode. Mas o cabo costuma ser mais estável.</p></details>
+      <details><summary>Quantos aparelhos posso ligar no cabo?<svg class="ic"><use href="#i-chev"/></svg></summary><p>Até 2, com até 10 metros por cabo. Cada metro a mais custa R$ 20,00.</p></details>
+      <details><summary>Tem fidelidade?<svg class="ic"><use href="#i-chev"/></svg></summary><p>Sim, de 12 meses, conforme o termo de contratação da Gironet.</p></details>
+      <details><summary>A velocidade é sempre a contratada?<svg class="ic"><use href="#i-chev"/></svg></summary><p>A Gironet garante 80% da velocidade contratada, conforme as condições aplicáveis. Ela também depende da rede, dos aparelhos e dos servidores acessados.</p></details>
+      <details><summary>O roteador está incluso?<svg class="ic"><use href="#i-chev"/></svg></summary><p>Sim, um roteador dual-band gigabit. O modelo é informado na contratação.</p></details>
+      <details><summary>Tem entretenimento incluso?<svg class="ic"><use href="#i-chev"/></svg></summary><p>Sim: Watch TV e Digilivros nos dois planos, conforme as condições de cada serviço.</p></details>
+      <details><summary>E se eu cancelar?<svg class="ic"><use href="#i-chev"/></svg></summary><p>Vale o que está no contrato. A Gironet recolhe os cabos da instalação e os equipamentos cedidos (roteador e ONU).</p></details>
     </div>
-    <div class="center rv" style="margin-top:28px;text-align:center">
+    <div class="center rv" style="margin-top:26px;text-align:center">
       <a class="btn btn-ghost" href="https://wa.me/5513997049248?text=Ol%C3%A1%21%20Tenho%20uma%20d%C3%BAvida%20sobre%20os%20planos%20Gamer%20da%20Gironet." target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg>Tirar outra dúvida</a>
     </div>
   </div>
@@ -826,10 +833,10 @@ html.js .rv.in{opacity:1;transform:none}
 <!-- 13. CHAMADA FINAL -->
 <section id="contratar">
   <div class="wrap">
-    <div class="final center rv" style="text-align:center">
+    <div class="final-b rv"><div class="final center" style="text-align:center">
       <span class="eyebrow">Hora de jogar</span>
-      <h2>Escolha seu plano Gamer e prepare sua conexão.</h2>
-      <p class="lead">Mais velocidade, ExitLag incluso e recursos pensados para quem joga online. Escolha seu plano Gamer Gironet e conheça as condições de contratação.</p>
+      <h2>Escolha seu plano e <span class="hl">prepare sua conexão.</span></h2>
+      <p class="lead">ExitLag incluso, fibra simétrica e instalação no cabo.</p>
       <div class="final-plans">
         <div class="fp">
           <div class="fp-info"><small>Combo Ultra Gamer</small><b>800 Mega</b><span class="fp-pr">R$ 169,90<em>/mês</em></span></div>
@@ -840,7 +847,7 @@ html.js .rv.in{opacity:1;transform:none}
           <a class="btn btn-primary" href="https://wa.me/5513997049248?text=Ol%C3%A1%21%20Quero%20contratar%20o%20Combo%20Premium%20Gamer%201%20Giga%20%28R%24%20189%2C90/m%C3%AAs%29%20com%20ExitLag." target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg>Contratar Premium Gamer</a>
         </div>
       </div>
-    </div>
+    </div></div>
   </div>
 </section>
 
@@ -868,17 +875,17 @@ html.js .rv.in{opacity:1;transform:none}
       <div>
         <h4>Condições dos planos Gamer</h4>
         <ul class="foot-list foot-cond">
-          <li>Fidelidade prevista de 12 meses, conforme o termo de fidelidade da Gironet.</li>
-          <li>Instalação VIP Gamer: até dois cabos RJ-45, com até 10 metros por cabo. Cada metro excedente custa R$ 20,00.</li>
-          <li>Licença ExitLag vinculada à assinatura, conforme as condições de ativação e uso do serviço. Resultados variam conforme o jogo, o servidor e a rede.</li>
-          <li>Watch TV e Digilivros inclusos, conforme as condições de cada serviço.</li>
+          <li>Fidelidade de 12 meses, conforme o termo de fidelidade da Gironet.</li>
+          <li>Instalação VIP Gamer: até 2 cabos RJ-45 com até 10 m cada. Metro excedente: R$ 20,00.</li>
+          <li>Licença ExitLag vinculada à assinatura. Resultados variam conforme o jogo, o servidor e a rede.</li>
+          <li>Watch TV e Digilivros conforme as condições de cada serviço.</li>
           <li>Garantia de 80% da velocidade contratada, conforme as condições aplicáveis.</li>
-          <li>No cancelamento, a Gironet recolhe o cabeamento da instalação e os equipamentos cedidos (roteador e ONU).</li>
+          <li>No cancelamento, a Gironet recolhe os cabos da instalação e os equipamentos cedidos (roteador e ONU).</li>
         </ul>
       </div>
     </div>
     <div class="foot-bottom">
-      <span>Planos sujeitos à viabilidade técnica no endereço de instalação. Valores mensais válidos para os planos Combo Ultra Gamer e Combo Premium Gamer.</span>
+      <span>Planos sujeitos à viabilidade técnica no endereço de instalação.</span>
       <span>© 2026 Gironet · Provedor de internet fibra óptica. ExitLag é marca de seus respectivos titulares.</span>
     </div>
   </div>
