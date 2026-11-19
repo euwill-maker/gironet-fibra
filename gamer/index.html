@@ -287,6 +287,21 @@ td.u .ic{color:var(--cyan);filter:drop-shadow(0 0 4px rgba(var(--c),.8))}
 .extra::after{content:"";position:absolute;right:-70px;top:-70px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(var(--c),.22),transparent 65%)}
 .extra.g::after{background:radial-gradient(circle,rgba(var(--g),.22),transparent 65%)}
 .extra h3{font-size:24px;margin:0 0 4px}
+/* logos dos apps */
+.lg-ex{display:block;height:30px;width:auto}
+.lg-sm{height:20px}
+.lg-lg{height:36px;margin-bottom:18px;filter:drop-shadow(0 0 14px rgba(196,33,33,.35))}
+.lg-xs{display:inline-block;height:13px;vertical-align:-2px;margin-left:4px}
+.lg-tv{display:block;height:16px;width:auto}
+.lg-tv-lg{height:22px;margin:4px 0 10px}
+.select-foot .lg-ex{flex-shrink:0}
+.apps{margin-top:26px;text-align:center}
+.apps-t{display:block;font:700 13px/1 var(--head);letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.apps-row{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.app{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 20px;border-radius:12px;border:1px solid var(--line2);background:rgba(35,42,70,.8)}
+.app .lg-ex{height:24px}
+.app-txt{font:700 19px/1 var(--head);letter-spacing:.02em;color:var(--text)}
+.app-txt .ic{width:20px;height:20px;color:var(--green);filter:drop-shadow(0 0 4px rgba(var(--g),.8))}
 .extra p{color:var(--muted);font-size:15px;position:relative;z-index:1}
 .who{grid-template-columns:1fr 1fr;gap:12px}
 .who .card{padding:18px 15px}
@@ -498,7 +513,7 @@ html.js .rv.in{opacity:1;transform:none}
             <span class="pick-price">R$ 189,90<small>/mês</small></span>
           </a>
         </div>
-        <div class="select-foot"><svg class="ic"><use href="#i-zap"/></svg><span><b>ExitLag incluso</b> nos dois planos</span></div>
+        <div class="select-foot"><img class="lg-ex lg-sm" src="exitlag.svg" alt="ExitLag" width="128" height="30"><span><b>incluso</b> nos dois planos</span></div>
       </div></div>
     </div>
   </div>
@@ -577,6 +592,14 @@ html.js .rv.in{opacity:1;transform:none}
         </div></article>
       </div>
     </div>
+    <div class="apps rv" aria-label="Apps inclusos nos dois planos">
+      <span class="apps-t">Inclusos nos dois planos</span>
+      <div class="apps-row">
+        <span class="app"><img class="lg-ex" src="exitlag.svg" alt="ExitLag" width="128" height="30"></span>
+        <span class="app"><img class="lg-tv" src="watchtv.svg" alt="Watch TV" width="86" height="14"></span>
+        <span class="app app-txt"><svg class="ic"><use href="#i-book"/></svg>Digilivros</span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -619,6 +642,7 @@ html.js .rv.in{opacity:1;transform:none}
   <div class="wrap">
     <div class="ex-grid">
       <div class="ex-body rv">
+        <img class="lg-ex lg-lg" src="exitlag.svg" alt="ExitLag" width="128" height="30">
         <span class="eyebrow">O que é o ExitLag?</span>
         <h2>Ele procura a <span class="hl">melhor rota</span> até o servidor do jogo.</h2>
         <p>O ExitLag é um software que analisa o caminho dos seus dados e, quando encontra uma rota mais eficiente, passa a usar essa rota.</p>
@@ -699,7 +723,7 @@ html.js .rv.in{opacity:1;transform:none}
     <div class="eq rv">
       <div class="eq-box"><small>Fibra Gironet</small><b>800 Mega ou 1 Giga</b><span>Simétrica, com Trânsito Premium</span></div>
       <div class="eq-op" aria-hidden="true">+</div>
-      <div class="eq-box"><small>Licença ExitLag</small><b>Otimização de rotas</b><span>Inclusa, sem custo à parte</span></div>
+      <div class="eq-box"><small>Licença <img class="lg-ex lg-xs" src="exitlag.svg" alt="ExitLag" width="128" height="30"></small><b>Otimização de rotas</b><span>Inclusa, sem custo à parte</span></div>
       <div class="eq-op" aria-hidden="true">=</div>
       <div class="eq-box eq-res"><small>Plano Gamer</small><b>Tudo em uma assinatura</b><span>A partir de R$ 169,90 por mês</span></div>
     </div>
@@ -790,7 +814,7 @@ html.js .rv.in{opacity:1;transform:none}
     <div class="extras">
       <div class="extra rv">
         <div class="ibox"><svg class="ic"><use href="#i-tv"/></svg></div>
-        <div><h3>Watch TV</h3><p>Streaming incluso. Consulte os conteúdos e os aparelhos compatíveis.</p></div>
+        <div><h3><img class="lg-tv lg-tv-lg" src="watchtv.svg" alt="Watch TV" width="86" height="14"></h3><p>Streaming incluso. Consulte os conteúdos e os aparelhos compatíveis.</p></div>
       </div>
       <div class="extra g rv">
         <div class="ibox ibox-g"><svg class="ic"><use href="#i-book"/></svg></div>
