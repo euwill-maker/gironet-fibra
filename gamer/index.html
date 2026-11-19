@@ -86,7 +86,12 @@ h3{font-size:22px;line-height:1.15}
 .top .btn{min-height:42px;padding:10px 16px;font-size:15px}
 
 /* ---------- hero ---------- */
-.hero{position:relative;isolation:isolate;padding:36px 0 76px;overflow:hidden}
+.hero{--photo:clamp(170px,27svh,250px);position:relative;isolation:isolate;padding:var(--photo) 0 76px;overflow:hidden}
+/* foto: no celular é uma faixa no topo que some no fundo; no computador cobre o hero inteiro */
+.hero-bg{position:absolute;z-index:-4;top:0;left:0;right:0;height:calc(var(--photo) + 150px);pointer-events:none}
+@media (max-width:979px){.hero .btns .btn-primary{order:-1}}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:55% 30%;display:block}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,33,55,.15) 0%,rgba(28,33,55,.25) 45%,rgba(28,33,55,.85) 78%,var(--bg) 100%)}
 .hero::before{content:"";position:absolute;inset:0;z-index:-3;
   background:linear-gradient(rgba(var(--c),.09) 1px,transparent 1px) 0 0/44px 44px,linear-gradient(90deg,rgba(var(--c),.09) 1px,transparent 1px) 0 0/44px 44px;
   -webkit-mask-image:radial-gradient(ellipse 90% 60% at 70% 15%,#000 10%,transparent 70%);mask-image:radial-gradient(ellipse 90% 60% at 70% 15%,#000 10%,transparent 70%)}
@@ -359,6 +364,10 @@ html.js .rv.in{opacity:1;transform:none}
 @media (min-width:980px){
   .nav{display:flex}
   .hero{padding:68px 0 110px}
+  .hero-bg{inset:0;height:auto}
+  .hero-bg img{object-position:right center}
+  .hero-bg::after{background:linear-gradient(90deg,var(--bg) 0%,rgba(28,33,55,.92) 30%,rgba(28,33,55,.35) 52%,rgba(28,33,55,0) 70%),linear-gradient(0deg,var(--bg) 0%,rgba(28,33,55,0) 30%)}
+  .hero .select{align-self:end}
   .hero-grid{grid-template-columns:1.1fr .9fr;gap:56px}
   .mini{grid-template-columns:repeat(4,1fr);gap:16px}
   .mini .card{padding:24px 22px}
@@ -449,6 +458,10 @@ html.js .rv.in{opacity:1;transform:none}
 
 <!-- 1. APRESENTAÇÃO -->
 <section class="hero" id="inicio">
+  <picture class="hero-bg" aria-hidden="true">
+    <source media="(min-width:980px)" srcset="hero-desktop.jpg">
+    <img src="hero-mobile.jpg" alt="" width="800" height="958" fetchpriority="high" decoding="async">
+  </picture>
   <div class="floor" aria-hidden="true"><i></i></div>
   <div class="wrap hero-grid">
     <div>
