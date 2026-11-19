@@ -86,12 +86,13 @@ h3{font-size:22px;line-height:1.15}
 .top .btn{min-height:42px;padding:10px 16px;font-size:15px}
 
 /* ---------- hero ---------- */
-.hero{--photo:clamp(170px,27svh,250px);position:relative;isolation:isolate;padding:var(--photo) 0 76px;overflow:hidden}
-/* foto: no celular é uma faixa no topo que some no fundo; no computador cobre o hero inteiro */
-.hero-bg{position:absolute;z-index:-4;top:0;left:0;right:0;height:calc(var(--photo) + 150px);pointer-events:none}
+.hero{position:relative;isolation:isolate;padding:26px 0 76px;overflow:hidden}
+/* foto: no celular o título fica na parede vazia do alto da foto e o gamer aparece logo abaixo; no computador a foto cobre o hero inteiro */
+.hero-bg{position:absolute;z-index:-4;top:0;left:0;right:0;height:min(125vw,640px);pointer-events:none}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:50% 100%;display:block}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,33,55,.55) 0%,rgba(28,33,55,.2) 38%,rgba(28,33,55,0) 62%,rgba(28,33,55,.55) 86%,var(--bg) 100%)}
+.hero-gap{height:clamp(80px,calc(125vw - 300px),230px)}
 @media (max-width:979px){.hero .btns .btn-primary{order:-1}}
-.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:55% 30%;display:block}
-.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,33,55,.15) 0%,rgba(28,33,55,.25) 45%,rgba(28,33,55,.85) 78%,var(--bg) 100%)}
 .hero::before{content:"";position:absolute;inset:0;z-index:-3;
   background:linear-gradient(rgba(var(--c),.09) 1px,transparent 1px) 0 0/44px 44px,linear-gradient(90deg,rgba(var(--c),.09) 1px,transparent 1px) 0 0/44px 44px;
   -webkit-mask-image:radial-gradient(ellipse 90% 60% at 70% 15%,#000 10%,transparent 70%);mask-image:radial-gradient(ellipse 90% 60% at 70% 15%,#000 10%,transparent 70%)}
@@ -262,9 +263,6 @@ td.u .ic{color:var(--cyan);filter:drop-shadow(0 0 4px rgba(var(--c),.8))}
 
 /* ---------- instalação ---------- */
 .inst-grid{display:grid;gap:30px;align-items:center}
-.inst-art{border-radius:18px;border:1px solid rgba(var(--c),.25);background:radial-gradient(ellipse at 50% 0%,rgba(var(--v),.16),transparent 60%),linear-gradient(180deg,#232b4a,#1b2038);padding:18px 10px 10px;box-shadow:0 0 30px rgba(var(--c),.08)}
-.inst-art svg{width:100%;height:auto}
-.inst-art text{font-family:'Rajdhani',sans-serif;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
 .cable{fill:none;stroke-width:5;stroke-linecap:round}
 .cable-g{stroke:var(--green);filter:drop-shadow(0 0 6px rgba(var(--g),.85))}
 .cable-c{stroke:var(--cyan);filter:drop-shadow(0 0 6px rgba(var(--c),.85))}
@@ -307,7 +305,19 @@ td.u .ic{color:var(--cyan);filter:drop-shadow(0 0 4px rgba(var(--c),.8))}
 .who .card{padding:18px 15px}
 .who .card h3{font-size:19px;margin:12px 0 4px}
 .who .card p{font-size:14px;line-height:1.45}
-.who .ibox{width:42px;height:42px}
+.who .card{padding:0 0 16px;overflow:hidden}
+.who .card h3,.who .card p{padding:0 14px}
+.who-img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-bottom:1px solid var(--line2)}
+.who .card:last-child .who-img{aspect-ratio:16/9;object-position:50% 40%}
+.pad-float{display:block;width:150px;height:auto;margin:-14px auto 4px;filter:drop-shadow(0 0 22px rgba(var(--c),.4)) drop-shadow(0 0 40px rgba(var(--v),.25));animation:padf 6s ease-in-out infinite}
+@keyframes padf{50%{transform:translateY(-10px) rotate(-5deg)}}
+#planos{overflow-x:clip}
+.inst-photo{position:relative;margin:0;border-radius:18px;overflow:hidden;border:1px solid rgba(var(--c),.3);box-shadow:0 0 30px rgba(var(--c),.18)}
+.inst-photo img{display:block;width:100%;height:auto}
+.inst-photo figcaption{position:absolute;left:12px;bottom:12px;display:flex;flex-wrap:wrap;gap:8px}
+.inst-photo figcaption span{padding:8px 12px;border-radius:999px;background:rgba(28,33,55,.88);border:1px solid rgba(var(--g),.65);font:700 14px/1 var(--head);letter-spacing:.08em;text-transform:uppercase;color:var(--green)}
+.inst-photo figcaption .c{border-color:rgba(var(--c),.65);color:var(--cyan)}
+.final-bg{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;opacity:.5}
 .who .card:last-child{grid-column:1 / -1}
 
 /* ---------- faq ---------- */
@@ -380,6 +390,7 @@ html.js .rv.in{opacity:1;transform:none}
   .nav{display:flex}
   .hero{padding:68px 0 110px}
   .hero-bg{inset:0;height:auto}
+  .hero-gap{display:none}
   .hero-bg img{object-position:right center}
   .hero-bg::after{background:linear-gradient(90deg,var(--bg) 0%,rgba(28,33,55,.92) 30%,rgba(28,33,55,.35) 52%,rgba(28,33,55,0) 70%),linear-gradient(0deg,var(--bg) 0%,rgba(28,33,55,0) 30%)}
   .hero .select{align-self:end}
@@ -389,9 +400,14 @@ html.js .rv.in{opacity:1;transform:none}
   .ex-grid{grid-template-columns:1fr 1.05fr;gap:56px}
   .route-card{position:sticky;top:96px}
   .inst-grid{grid-template-columns:1.05fr 1fr;gap:56px}
+}
+@media (min-width:1200px){
+  #planos .wrap{position:relative}
+  .pad-float{position:absolute;right:0;top:-46px;width:220px;margin:0}
   .who{grid-template-columns:repeat(5,1fr);gap:14px}
-  .who .card{padding:22px 18px}
+  .who .card{padding:0 0 18px}
   .who .card:last-child{grid-column:auto}
+  .who .card:last-child .who-img,.who-img{aspect-ratio:1/1}
 }
 @media (max-width:599px){
   table{font-size:13.5px}
@@ -408,7 +424,10 @@ html.js .rv.in{opacity:1;transform:none}
   .plan-speed{font-size:74px}
   th,td{padding:11px 7px}
   th:first-child,td:first-child{padding-left:12px}
-  .mini .card,.who .card{padding:16px 13px}
+  .mini .card{padding:16px 13px}
+  .chip{font-size:13.5px;padding:7px 10px 7px 8px;gap:6px}
+  .chip .ic{width:16px;height:16px}
+  .who .card h3,.who .card p{padding:0 12px}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -475,7 +494,7 @@ html.js .rv.in{opacity:1;transform:none}
 <section class="hero" id="inicio">
   <picture class="hero-bg" aria-hidden="true">
     <source media="(min-width:980px)" srcset="hero-desktop.jpg">
-    <img src="hero-mobile.jpg" alt="" width="800" height="958" fetchpriority="high" decoding="async">
+    <img src="hero-mobile.jpg" alt="" width="800" height="1000" fetchpriority="high" decoding="async">
   </picture>
   <div class="floor" aria-hidden="true"><i></i></div>
   <div class="wrap hero-grid">
@@ -483,6 +502,7 @@ html.js .rv.in{opacity:1;transform:none}
       <span class="tag"><i></i>Linha Gamer · Gironet + ExitLag</span>
       <h1>Sua conexão está pronta para o <span class="hl">próximo nível?</span></h1>
       <p class="lead">Fibra simétrica, rotas priorizadas para jogos e ExitLag incluso no plano.</p>
+      <div class="hero-gap" aria-hidden="true"></div>
       <ul class="chips">
         <li class="chip"><svg class="ic"><use href="#i-sym"/></svg>800 Mega ou 1 Giga</li>
         <li class="chip"><svg class="ic"><use href="#i-zap"/></svg>ExitLag incluso</li>
@@ -543,6 +563,7 @@ html.js .rv.in{opacity:1;transform:none}
 <!-- 3. PLANOS -->
 <section class="sec" id="planos">
   <div class="wrap">
+    <img class="pad-float" src="controle.webp" alt="" aria-hidden="true" width="640" height="633" loading="lazy" decoding="async">
     <div class="sec-head center rv">
       <span class="eyebrow">Planos Gamer</span>
       <h2>Escolha o seu plano <span class="hl">Gamer</span></h2>
@@ -734,45 +755,10 @@ html.js .rv.in{opacity:1;transform:none}
 <!-- 8. INSTALAÇÃO VIP GAMER -->
 <section class="sec" id="instalacao">
   <div class="wrap inst-grid">
-    <div class="inst-art rv" aria-hidden="true">
-      <svg viewBox="0 0 520 330">
-        <!-- cabos -->
-        <path class="cable cable-g" d="M232 118 C 232 190, 110 160, 110 228"/>
-        <path class="cable-flow" d="M232 118 C 232 190, 110 160, 110 228"/>
-        <path class="cable cable-c" d="M288 118 C 288 190, 410 160, 410 228"/>
-        <path class="cable-flow" d="M288 118 C 288 190, 410 160, 410 228"/>
-        <!-- etiquetas de metragem -->
-        <g font-size="20">
-          <rect class="glow-g" x="92" y="142" width="120" height="38" rx="19" fill="#1c2137" stroke="#96ff40" stroke-width="2"/>
-          <text x="152" y="168" text-anchor="middle" fill="#96ff40">até 10 m</text>
-          <rect class="glow-c" x="308" y="142" width="120" height="38" rx="19" fill="#1c2137" stroke="#22e4ff" stroke-width="2"/>
-          <text x="368" y="168" text-anchor="middle" fill="#22e4ff">até 10 m</text>
-        </g>
-        <!-- roteador -->
-        <g>
-          <line x1="214" y1="62" x2="200" y2="20" stroke="#b0bad8" stroke-width="4" stroke-linecap="round"/>
-          <line x1="306" y1="62" x2="320" y2="20" stroke="#b0bad8" stroke-width="4" stroke-linecap="round"/>
-          <rect x="190" y="60" width="140" height="60" rx="12" fill="#2b3356" stroke="#a463ff" stroke-width="2" style="filter:drop-shadow(0 0 8px rgba(164,99,255,.6))"/>
-          <circle class="glow-g" cx="212" cy="90" r="4" fill="#96ff40"/><circle class="glow-g" cx="226" cy="90" r="4" fill="#96ff40"/><circle class="glow-c" cx="240" cy="90" r="4" fill="#22e4ff"/>
-          <rect x="222" y="110" width="20" height="12" rx="2" fill="#96ff40"/>
-          <rect x="278" y="110" width="20" height="12" rx="2" fill="#22e4ff"/>
-          <text x="296" y="97" text-anchor="middle" font-size="16" fill="#b0bad8">WI-FI</text>
-        </g>
-        <!-- PC -->
-        <g>
-          <rect class="glow-g" x="52" y="228" width="116" height="72" rx="8" fill="#2b3356" stroke="#96ff40" stroke-width="2"/>
-          <rect x="62" y="238" width="96" height="52" rx="4" fill="#1c2137"/>
-          <polyline points="74 272 92 258 106 268 124 250 146 262" fill="none" stroke="#96ff40" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-          <text x="110" y="326" text-anchor="middle" font-size="21" fill="#f2f5ff">PC</text>
-        </g>
-        <!-- console -->
-        <g>
-          <rect class="glow-c" x="352" y="228" width="116" height="72" rx="10" fill="#2b3356" stroke="#22e4ff" stroke-width="2"/>
-          <svg x="380" y="234" width="60" height="60" style="color:#22e4ff"><use href="#i-pad"/></svg>
-          <text x="410" y="326" text-anchor="middle" font-size="21" fill="#f2f5ff">Console</text>
-        </g>
-      </svg>
-    </div>
+    <figure class="inst-photo rv">
+      <img src="instalacao.jpg" alt="Cabo de rede sendo ligado na porta do roteador" width="1000" height="750" loading="lazy" decoding="async">
+      <figcaption><span>2 cabos</span><span class="c">até 10 m cada</span></figcaption>
+    </figure>
     <div class="rv">
       <span class="eyebrow">Instalação VIP Gamer</span>
       <h2>PC e console <span class="hl">no cabo</span>, direto no roteador.</h2>
@@ -832,11 +818,11 @@ html.js .rv.in{opacity:1;transform:none}
       <h2>Feito para quem leva o jogo <span class="hl">a sério.</span></h2>
     </div>
     <div class="grid who">
-      <div class="card rv"><div class="ibox ibox-g"><svg class="ic"><use href="#i-trophy"/></svg></div><h3>Joga competitivo</h3><p>Busca mais estabilidade nas partidas.</p></div>
-      <div class="card rv"><div class="ibox"><svg class="ic"><use href="#i-pad"/></svg></div><h3>PC ou console</h3><p>Cabo direto no roteador.</p></div>
-      <div class="card rv"><div class="ibox ibox-v"><svg class="ic"><use href="#i-live"/></svg></div><h3>Faz live</h3><p>Upload alto para transmitir.</p></div>
-      <div class="card rv"><div class="ibox"><svg class="ic"><use href="#i-dl"/></svg></div><h3>Baixa jogos pesados</h3><p>Alta velocidade para downloads.</p></div>
-      <div class="card rv"><div class="ibox ibox-g"><svg class="ic"><use href="#i-users"/></svg></div><h3>Divide a internet</h3><p>Vários aparelhos ao mesmo tempo.</p></div>
+      <div class="card rv"><img class="who-img" src="quem-competitivo.jpg" alt="" width="600" height="600" loading="lazy" decoding="async"><h3>Joga competitivo</h3><p>Busca mais estabilidade nas partidas.</p></div>
+      <div class="card rv"><img class="who-img" src="quem-console.jpg" alt="" width="600" height="600" loading="lazy" decoding="async"><h3>PC ou console</h3><p>Cabo direto no roteador.</p></div>
+      <div class="card rv"><img class="who-img" src="quem-live.jpg" alt="" width="600" height="600" loading="lazy" decoding="async"><h3>Faz live</h3><p>Upload alto para transmitir.</p></div>
+      <div class="card rv"><img class="who-img" src="quem-download.jpg" alt="" width="600" height="600" loading="lazy" decoding="async"><h3>Baixa jogos pesados</h3><p>Alta velocidade para downloads.</p></div>
+      <div class="card rv"><img class="who-img" src="quem-familia.jpg" alt="" width="600" height="600" loading="lazy" decoding="async"><h3>Divide a internet</h3><p>Vários aparelhos ao mesmo tempo.</p></div>
     </div>
   </div>
 </section>
@@ -871,6 +857,7 @@ html.js .rv.in{opacity:1;transform:none}
 <section id="contratar">
   <div class="wrap">
     <div class="final-b rv"><div class="final center" style="text-align:center">
+      <img class="final-bg" src="final-bg.jpg" alt="" aria-hidden="true" width="1600" height="687" loading="lazy" decoding="async">
       <span class="eyebrow">Hora de jogar</span>
       <h2>Escolha seu plano e <span class="hl">prepare sua conexão.</span></h2>
       <p class="lead">ExitLag incluso, fibra simétrica e instalação no cabo.</p>
